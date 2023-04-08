@@ -1,15 +1,22 @@
 .main-wrapper {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 150px;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+    display: flex;
 }
 
 .shipping-main-container {
-    background-color: aquamarine;
+    padding-left: 100px;
+    
 }
-.container {
-    margin-left: 150px;
+
+.shipping-settings {
     padding-left: 150px;
+}
+
+#accordionFlush {
+    height: 80%;
+    width: 80%;
+    margin-left: 350px;
+    margin-top: 200px;
 }
