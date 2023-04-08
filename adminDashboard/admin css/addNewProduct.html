@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Loft Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./adminDashboard.css/addNewProduct.css">
+    <link rel="stylesheet" href="./adminDashboard.css/miniproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <!------------------------------Sidebar--------------------------->
+   
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <a class="admin" href="index.html"><img class="klogo" src="./images/KLT-modified.png" alt="Kaizen Loft Logo" width="90px" height="90px"></a>
+            <a class="kaizen" href="index.html">ADMIN</a>
+            <a href="toShip.html">To Ship</a>
+            <a href="shipping.html"> Shipping</a>
+            <a href="ShippingSettings.html">Shipping Settings</a>
+            <a href="MyOrder.html">My Order</a>
+            <a href="Cancellation.html">Cancellation</a>
+            <a href="Refund.html">Return/Refund</a>
+            <a href="MyProduct.html">My Product</a>
+            <a href="AddNewProduct.html">Add New Product</a>
+            <a href="productSetting.html">Product Settings</a>
+            <a href="Mybalance.html">My Balance</a>
+            <a href="BankAccount.html">Bank Account</a>
+            <a href="PaymentSetting.html">Payment Settings</a>
+            <a class="bus" href="businessinsight.html">Business Insight</a>
+            <a class="user" href="accountUser.html">Account</a>
+            <a class="logout" href="login.html">Logout</a>
+        </div>
+    </div>
+<!----------------------------End Of Sidebar---------------------------------------------->
+    <section class="upload-container">
+        <div class="upLoadImg">
+            <span>Upload Image</span>
+            <i class="fas fa-plus"></i>
+            
+        </div>
+    </section>
+    <!------------------Product Information------------------------------>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">Product Information</div>
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="col-sm-2">Normal</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Help text</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control">
+                            <small class="form-text text-muted">A help text that brings hint to users.</small>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Placeholder</label>
+                        <div class="col-sm-10">
+                            <input type="text" placeholder="placeholder" class="form-control">
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Disabled</label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled="" placeholder="disabled or read only input here" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Checkboxes and radios <br>
+                            <small class="text-info">Normal Bootstrap elements</small>
+                        </label>
+                        <div class="col-sm-10">
+                            <div>
+                                <input name="option" type="checkbox" value="">
+                                <label for="option">Check this default checkbox</label>
+                            </div>
+                            <div>
+                                <input type="radio" checked="" value="option1" name="optionsRadios">
+                                <label for="optionsRadios">Option one is this and that be sure to include why it's great</label>
+                            </div>
+                            <div>
+                                <input type="radio" value="option2" name="optionsRadios">
+                                <label for="optionsRadios">Option two can be something else and selecting it will deselect option one</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Inline checkboxes</label>
+                        <div class="col-sm-10">
+                            <label class="checkbox-inline">
+                                <input id="inlineCheckbox1" type="checkbox" value="option1"> Apple
+                            </label>
+                            <label class="checkbox-inline mx-sm-3 mb-2">
+                                <input id="inlineCheckbox2" type="checkbox" value="option2"> Orange
+                            </label>
+                            <label class="checkbox-inline">
+                                <input id="inlineCheckbox3" type="checkbox" value="option3"> Banana
+                            </label>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Checkboxes, Toggle Switch, &amp; Radios <br>
+                            <small class="text-info">Custom elements</small>
+                        </label>
+                        <div class="col-sm-10">
+                            <div class="i-checks">
+                                <input id="checkboxCustom1" type="checkbox" value="">
+                                <label for="checkboxCustom1">Checkbox one</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="checkboxCustom2" type="checkbox" value="" checked="">
+                                <label for="checkboxCustom2">Checkbox two checked</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="checkboxCustom" type="checkbox" value="" disabled="" checked="">
+                                <label for="checkboxCustom">Checkbox three checked and disabled</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="checkboxCustom3" type="checkbox" value="" disabled="">
+                                <label for="checkboxCustom3">Checkbox four disabled</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="radioCustom1" type="radio" value="option1" name="option">
+                                <label for="radioCustom1">Option one</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="radioCustom2" type="radio" checked="" value="option2" name="option">
+                                <label for="radioCustom2">Option two checked</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="radioCustom3" type="radio" disabled="" checked="" value="option2">
+                                <label for="radioCustom3">Option three checked and disabled</label>
+                            </div>
+                            <div class="i-checks">
+                                <input id="radioCustom4" type="radio" disabled="" name="">
+                                <label for="radioCustom4">Option four disabled</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">A custom checkbox</label>
+                            </div>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="switch2">
+                                <label class="custom-control-label" for="switch2">Custom checkbox toggle switch</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Select</label>
+                        <div class="col-sm-10 select">
+                            <select name="" class="form-control">
+                                <option value="">option 1</option>
+                                <option value="">option 2</option>
+                                <option value="">option 3</option>
+                                <option value="">option 4</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-sm-10 offset-sm-2 select">
+                            <br>
+                            <select name="" multiple="" class="form-control">
+                                <option value="">option 1</option>
+                                <option value="">option 2</option>
+                                <option value="">option 3</option>
+                                <option value="">option 4</option>
+                            </select>
+                            <small class="form-text">Select for than one</small>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Input with success</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control is-valid">
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Input with warning</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control is-invalid">
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row has-danger">
+                        <label class="col-sm-2">Input with error</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control is-invalid">
+                            <div class="invalid-feedback">Read error message here.</div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Control sizing</label>
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <input type="text" placeholder=".form-control-lg" class="form-control form-control-lg">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder=".form-control" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder=".form-control-sm" class="form-control form-control-sm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Column sizing</label>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <input type="text" placeholder=".col-md-2" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" placeholder=".col-md-3" class="form-control">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder=".col-md-4" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Input groups</label>
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <input type="text" class="form-control" placeholder="amount">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">$</div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="0000">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <label class="col-sm-2">Button addons</label>
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <button type="button" class="btn btn-primary">Go!</button>
+                                    </span>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-append">
+                                        <button type="button" class="btn btn-primary">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div><br>
+                    <div class="form-group row">
+                        <div class="col-sm-4 offset-sm-2">
+                            <button type="submit" class="btn btn-secondary mb-2"><i class="fas fa-times"></i> Cancel</button>
+                            <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-save"></i> Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+    
+</body>
+</html>

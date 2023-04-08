@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Favicon CSS -->
+    <link rel="shortcut icon" href="./assets/Greenhouse_logo.png" type="image/x-icon">
+    <!-- icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
+    <!-- Js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
+
+</head>
+<body>
+    <div class="main-parent">
+        <div class="form-wrap">
+            <form action="">
+                <h1><span>Registration</span>Form</h1>
+                <div class="single-input">
+                    <input required type="text" id="fname" placeholder="First name">
+                </div>
+                <div class="single-input">
+                    <input required type="text" id="lname" placeholder="Last name">
+                </div>
+                <div class="single-input">
+                    <input required type="email" id="email" placeholder="Email address">
+                </div>
+                <div class="single-input">
+                    <input required type="password" id="pass" placeholder="Password">
+                </div>
+                <div class="single-input">
+                    <input required type="password" id="cpass" placeholder="Confirm password">
+                </div>
+                <div class="Submit-button">
+                    <button class="button">Submit</button>
+                </div>
+                <div class="account-have">
+                    <a href="#">Forget password</a>
+                    <a href="LoginForm.html">Already have an account please login</a>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const Submit_button = document.querySelector(".button");
+        Submit_button.onclick = (e) => {
+            e.preventDefault();
+            //all input data received this variables
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("pass").value;
+            const cpass = document.getElementById("cpass").value;
+
+            //now store this data in your web browser store
+            localStorage.setItem('FirstName', fname);
+            localStorage.setItem('LastName', lname);
+            localStorage.setItem('Email', email);
+            localStorage.setItem('Password', pass);
+            localStorage.setItem('Confirm password', cpass);
+
+            //now write some condition
+            if(fname == "" && lname == "" && email == "" && pass == "" && cpass == ""){
+                    alert("Opps...! Input field must be fill");
+                }
+                else
+                {
+                    if(pass !== cpass){
+                        alert("Opps...! Password not matching!");  
+                    }
+                    else{
+                        alert("Registration successful");
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.main-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 150px;
+}
+
+.shipping-main-container {
+    background-color: aquamarine;
+}
+.container {
+    margin-left: 150px;
+    padding-left: 150px;
+}

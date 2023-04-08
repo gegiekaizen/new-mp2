@@ -1,0 +1,27 @@
+:root {
+    --mycolor1: #6DB1FF;
+    --mycolor2: #F16165;
+    --mycolor3: #FFBA05;
+    --mycolor4: #b0d05d;
+    --mycolor5: #653298;
+    --mycolor6: #00C86F;
+}
+.nav-tab-refund {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background-color: red;
+}
+
+.toRefund {
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+background-color: red;
+}

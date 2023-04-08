@@ -1,0 +1,100 @@
+.main-container-bank {
+    margin: 0;
+    padding: 0;
+
+}
+
+.second-container-bank {
+    width: 80%;
+    height: 100px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+
+}
+
+.banko {
+    text-align: left;
+    display: inline-block;
+    justify-content: left;
+    align-items: left;
+    margin-left: 30px;
+}
+
+.bank-account {
+    width: 350px;
+    height: 250px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 45px auto;
+    margin-left: 20px !important;
+    position: absolute;
+    left: 125px;
+    border: dashed var(--mycolor5);
+
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.bank-account2 {
+    width: 80%;
+    height: 400px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+}
+
+.atm {
+    width: 350px;
+    height: 250px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 45px auto;
+    margin-left: 60px !important;
+    position: absolute;
+    left: 600px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.bank-default {
+    font-size: 10px;
+    background-color: var(--mycolor6);
+    opacity: 0.9;
+
+}
+
+.icon-tabler-plus {
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.Add-bank-online {
+    margin: 30px auto;
+
+    display: inline-block;
+    padding-left: 20px;
+
+}
+
+.Add-bank-online {
+    margin-left: 30px;
+
+}

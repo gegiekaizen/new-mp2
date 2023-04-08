@@ -1,0 +1,28 @@
+.upload-container {
+    width: 80%;
+    height: 250px;
+    padding: 25px;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    display: flex;
+}
+
+.upLoadImg {
+    border: dashed 2px var(#AE67DE);
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    
+
+}
+.card {
+    height: 100%;
+    width: 70%;
+    margin: 250px auto;
+   
+    position: relative;
+    margin-left: 300px !important;
+}

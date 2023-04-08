@@ -1,0 +1,43 @@
+.col-lg-12 {
+    margin: 40px;
+    padding: 0;
+    background-color: var(--mycolor5);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-left: 35%;
+    /* padding-right: 70%; */
+}
+
+.card {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 0, auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 2px;
+
+}
+
+.card-header {
+    text-align: center;
+    color: var(--mycolor5);
+}
+
+/* .kaizen-registration {
+    text-align: left;
+    position: absolute;
+    justify-content: left !important;
+    align-items: end;
+} */
+
+.card-title-registration {
+    display: flex;
+    justify-content: end;
+    align-content: end;
+}
+
+#reg-logo {
+    align-items: end;
+}

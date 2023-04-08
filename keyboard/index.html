@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>2ndpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<nav class="navbar navbar-expand-md">
+    <div class="container navbar-dark">
+      <img src="KLT-modified.png" class="not-fluid" alt="Kaizen Loft Tech logo" height="100" width="100"> 
+      <a class="navbar-brand" href="#">Kaizen Loft Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropstart">
+                            <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Components</a>
+                            <ul class="dropdown-menu">
+
+
+
+                                <li><a href="" class="dropdown-item"></a>Chasis Fan</li>
+                                <li><a href="" class="dropdown-item"></a>CPU Cooling</li>
+                                <li><a href="" class="dropdown-item"></a>GRaphic Cards</li>
+                                <li><a href="" class="dropdown-item"></a>Memory</li>
+                                <li><a href="" class="dropdown-item"></a>Motherboards</li>
+                                <li><a href="" class="dropdown-item"></a>PC case</li>
+                                <li><a href="" class="dropdown-item"></a>Power Supply</li>
+                                <li><a href="" class="dropdown-item"></a>AMD Procesors</li>
+                                <li><a href="" class="dropdown-item"></a>intel procesors</li>
+                                <li><a href="" class="dropdown-item"></a>SOlid State Drives & hard drive</li>
+                        </li>
+                    </ul>
+
+
+
+                <li class="dropstart dropdown-menu-start">
+                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Peripherals</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Keyboards</a></li>
+                        <li><a href="#" class="dropdown-item">Mice</a></li>
+                        <li><a href="#" class="dropdown-item">Headsets</a></li>
+                        <li><a href="#" class="dropdown-item">Speakers</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                <li><a class="dropdown-item" href="#">Pc Furnitures</a></li>
+                <li><a class="dropdown-item" href="#">OS & Softwares</a></li>
+                <li><a class="dropdown-item" href="#">Laptop & mobile Devices</a></li>
+
+            </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Easy Build</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">on sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Rewards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Warranty</a>
+            </li>
+
+
+
+        </div>
+
+    </div>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <div class="d-flex">
+            <i id="cart" class="fas fa-shopping-cart"></i>
+            <span class="cart-quantity">0</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+<!-- Section-->
+<div class="cart-modal-overlay">
+    <div class="cart-modal">
+      <i id="close-btn" class="fas fa-times"></i>
+      <h1 class="cart-is-empty">Cart is empty</h1>
+
+      <div class="product-rows">
+      </div>
+      <div class="total">
+        <h1 class="cart-total">TOTAL</h1>
+        <span class="total-price">$0</span>
+        <button class="purchase-btn">PURCHASE</button>
+      </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5"  id="product-1">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="ASUS ROG Azoth 75 Wireless DIY Custom Gaming Keyboard,.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Lorem ipsum dolor sit.</h5>
+                            <!-- Product price-->
+                            $40.00 - $80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem, ipsum dolor.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5"  id="product-2">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem" id="product-price">Sale
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" id="product-image" src="Corsair K100 RGB Optical-Mechanical Gaming Keyboard.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Lorem, ipsum dolor.</h5>
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            $18.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">  <button class="btn btn-outline-success mt-auto">Add to cart</button></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-3">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="Corsair K55 RGB PRO XT - Dynamic Per-Key RGB Backlighting.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$50.00</span>
+                            $25.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-4">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="Corsair K70 RGB MK.2 SE Mechanical RAPIDFIRE Gaming Keyboard.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            $40.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="Corsair K100 RGB Optical-Mechanical Gaming Keyboard.jpg"alt= "..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$50.00</span>
+                            $25.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-6">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="Logitech G413 Backlit Mechanical Gaming Keyboard.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product price-->
+                            $120.00 - $280.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-7">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="Logitech G915 LIGHTSPEED RGB Mechanical Gaming Keyboard.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Special Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            $18.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5" id="product-8">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="MSI Vigor GK20 US Gaming Backlit RGB.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            $40.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Add-to-cart</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+   
+</section>
+
+
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">mp2 project 2023</p>
+    </div>
+</footer>
+
+</html>

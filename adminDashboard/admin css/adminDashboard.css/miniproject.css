@@ -1,0 +1,286 @@
+:root {
+    --mycolor1: #6DB1FF;
+    --mycolor2: #F16165;
+    --mycolor3: #FFBA05;
+    --mycolor4: #b0d05d;
+    --mycolor5: #9248db;
+    --mycolor6: #00C86F;
+}
+
+body {
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    /* vertical-align: baseline; */
+    border: 0;
+    font-family: "Lato", sans-serif;
+    color: var(--mycolor5);
+    height: 100vh;
+    width: 100%;
+
+}
+
+.header-content a .active1 {
+    text-align: start;
+    right: 30px;
+}
+
+/* .ad {
+    
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+} */
+.kaizen {
+    margin-top: 110px;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: rebeccapurple;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 20px;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* .sidebar a.active,
+.ord,
+.pro,
+.fin {
+    background-color: #27C2E1;
+    color: white;
+} */
+.admin {
+    padding-left: 50px ;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar a:hover {
+    background-color: #AE67DE;
+    color:white;
+}
+/* .sidebar a:hover:not(.active, .ord, .pro, .fin, .home, .hme) {
+    background-color: #AE67DE;
+    color: white;
+} */
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        /* float: none; */
+    }
+}
+
+/***********************End of Sidebar******************************/
+/**************Landing Page***************************/
+
+.main-container {
+    padding: 40px;
+}
+
+.first-container {
+    width: 80%;
+    padding: 25px;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+
+}
+
+/* .order {
+    color: var(--mycolor5);
+    font-weight: bold;
+    text-align: left;
+    padding-left: 375px;
+    padding-top: 5px;
+    font-weight: bolder;
+
+} */
+
+
+.toShip {
+    background-color: var(--mycolor3);
+    cursor: pointer;
+}
+
+.shipin {
+    background-color: var(--mycolor4);
+    cursor: pointer;
+}
+
+.comp {
+    background-color: var(--mycolor6);
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: var(--mycolor2);
+    cursor: pointer;
+}
+
+
+.panggalawa {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    max-height: 100vh;
+}
+
+.second-container {
+    width: 80%;
+    height: 850px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+}
+
+#chartContainer {
+    margin-bottom: 50px;
+}
+
+.insight {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 5px;
+    font-weight: bolder;
+    margin-left: 325px;
+
+}
+.tatlo {
+    padding: 40px;
+}
+
+.thrird-container {
+    width: 80%;
+    height: 100%;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 0px auto;
+    position: relative;
+    left: 125px;
+}
+
+.rank {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    font-weight: bolder;
+    margin-left: 325px;
+}
+
+.order-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+
+}
+
+.order-card-container>* {
+    width: 200px;
+    height: 90px;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*****************Shipping Settings**********************************/
+.ss-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.shipping-main-container {
+    margin: 50px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.shipping-sub-container {
+    margin-top: 90px;
+    height: 150px;
+    width: 80%;
+    background-color: #cbcece;
+
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 0px auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+}
+
+.logistics-trans {
+    padding-left: 250px;
+}
+
+.select-shipping-settings {
+    margin-top: 290px;
+    height: 650px;
+    width: 80%;
+    background-color: #cbcece;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 200px auto 0 auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 200px;
+} 
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+

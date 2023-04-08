@@ -1,0 +1,23 @@
+.card-category {
+    width: 20rem;
+    background-color: #cbcece;
+    padding: 30px 15px 15px 15px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 100px auto 0 auto;
+    position: relative;
+    left: 40px;
+
+}
+
+.hover-effect>*:hover {
+    opacity: 0.8;
+    border: 2px solid black !important;
+}
+
+.card-title {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-weight: bold x;
+}
