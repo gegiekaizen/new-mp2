@@ -31,8 +31,43 @@
 
         <div class="card-body">
            
-            <form class="needs-validation" novalidate accept-charset="utf-8">
-                <div class="form-row">
+            <form class="needs-validation" validate accept-charset="utf-8">
+
+              
+                <form id="signupForm">
+                    <div>
+                        <label for="firstName">First name</label>
+                        <br>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Last name</label>
+                        <br>
+                        <input type="text" name="lastName" id="lastName">
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <br>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="">Phone Number</label>
+                        <br>
+                        <input type="number" name="phoneNumber" id="phoneNumber">
+                    </div>
+                    <div>
+                        <label for="">Password</label>
+                        <br>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <br>
+                    <input type="submit" value="Sign Up" id="signupButton">
+                    <button type="submit"><a href="./login.html">Login</a></button>
+                </form>
+
+
+
+                <!-- <div class="form-row">
                     <div class="form-group ">
                         <label for="name">Full Name</label>
                         <input type="text" class="form-control" name="fname" placeholder="Full Name" required>
@@ -98,18 +133,12 @@
                         <div class="invalid-feedback">Please enter your City.</div>
                     </div>
                     <br>
-                    <div class="form-group ">
-                        <label for="zip">Zip code</label>
-                        <input type="text" class="form-control" name="zip" placeholder="00000" required>
-                        <div class="valid-feedback">Looks good!</div>
-                        <div class="invalid-feedback">Please enter a Zip code.</div>
-                    </div>
-                </div>
-                <br>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Register</button>
-                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Reset</button>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Reset</button> -->
             </form>
         </div>
     </div>
 </div>
+</body>
+<script src="./adminDashboard.css/product.js/sign-up.js"></script>
 </html>

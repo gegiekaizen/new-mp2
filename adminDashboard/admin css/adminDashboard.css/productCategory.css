@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-product-categories {
+    margin-left: 200px;
+    padding: 200px;
+    justify-content: center;
+}
+.card{
+    padding-top: 10px;
+    align-content: center;
+    text-align: center;
+    border: 5px;
+    gap: 10px;
+    box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+}  
+.hover-effect > *:hover{
+    opacity: 0.8;
+    border: 2px solid black !important;  
+}
