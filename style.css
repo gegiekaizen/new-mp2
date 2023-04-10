@@ -470,7 +470,7 @@ min-height: 100vh;
 
 /* Product Page */
 .products{
-  background: rgba(0,0,0,0.4)url("images/products.jpg");
+  background: rgba(0,0,0,0.4)url("./images/razer-hanbo-chroma-hero-desktop-v2.png");
   background-position:center;
   background-size: cover;
   min-height: 60vh;
