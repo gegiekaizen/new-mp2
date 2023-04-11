@@ -30,13 +30,13 @@
                 <h1><span>Login</span></h1>
 
                 <div class="single-input">
-                    <input required type="email" id="Email" placeholder="Email address">
+                    <input type="email" id="email" placeholder="Email address">
                 </div>
                 <div class="single-input">
-                    <input required type="password" id="password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password">
                 </div>
                 <div class="Submit-button">
-                    <button class="button login">Login</button>
+                    <input type="submit" value="Login" id="loginButton">
                 </div>
                 <div class="account-have">
                     <a href="#">Forget password</a>
@@ -49,62 +49,48 @@
 
     
     <script>
-        const Submit_button = document.querySelector(".button");
-        Submit_button.onclick = (e) => {
-            e.preventDefault();
-            //all input data received this variables
-            const fname = document.getElementById("fname").value;
-            const lname = document.getElementById("lname").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("pass").value;
-            const cpass = document.getElementById("cpass").value;
+        const loginHandler = document.getElementById("loginButton");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const user = JSON.parse(localStorage.getItem("userInfo"));
 
-            //now store this data in your web browser store
-            localStorage.setItem('FirstName', fname);
-            localStorage.setItem('LastName', lname);
-            localStorage.setItem('Email', email);
-            localStorage.setItem('Password', pass);
-            localStorage.setItem('Confirm password', cpass);
+loginHandler.addEventListener("click", (e) => {
+	e.preventDefault();
 
-            //now write some condition
-            if(fname == "" && lname == "" && email == "" && pass == "" && cpass == ""){
-                alert("Opps...! Input field must be fill");
-            }
-            else
-            {
-                if(pass !== cpass){
-                    alert("Opps...! Password not matching!");  
-                }
-                else{
-                    alert("Registration successful");
-                }
-            }
+	const userData = user.find((data) => data.email === email.value);
+
+	if (userData) {
+		if (
+			email.value === userData.email &&
+			password.value === userData.userPassword
+		) {
+			// SET AUTHENTICATED USER TO LOGGED IN TRUE
+			let newData = user.map((data) => {
+				if (data.email === userData.email) {
+					return { ...userData, isLoggedIn: true };
+				} else {
+                    
+					return data;
+				}
+			});
+			// console.log(newData);
+			localStorage.setItem("userInfo", JSON.stringify(newData));
+			console.log("login Success");
+            
+			window.location.href = "index.html";
+		} 
+        // FALLBACK FOR WRONG INPUT CREDENTIAL
+        else{
+            alert("Invalid Username or password");
         }
-
-        const login = document.querySelector('.login');
-        login.onclick = (e) => {
-            e.preventDefault();            
-            //cautch the value which is type user login page
-            const emailAddress = document.getElementById("Email").value;
-            const passWord = document.getElementById("password").value;
-
-            //let's get value in local Storage which store user in registration form
-            const Email = localStorage.getItem("Email");
-            const Password = localStorage.getItem("Password");
-
-            if(emailAddress == "" && passWord == ""){
-                alert("Opps...! Input field must be fill");
-            }
-            else{
-                if(emailAddress == Email && passWord == Password){
-                    window.location.assign("index.html");
-                    alert("Login successful");  
-                }
-                else{
-                    alert("Something is wrong");  
-                }
-            }
+	}
+        else{
+            alert("Invalid Username or password");
         }
+        
+    
+	
+});
     </script>
 </body>
 </html>
