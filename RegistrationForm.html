@@ -26,25 +26,30 @@
 <body>
     <div class="main-parent">
         <div class="form-wrap">
-            <form action="">
+            <form id="signupForm">
                 <h1><span>Registration</span>Form</h1>
                 <div class="single-input">
-                    <input required type="text" id="fname" placeholder="First name">
+                    
+                    <input type="text" id="firstName" placeholder="First name">
                 </div>
                 <div class="single-input">
-                    <input required type="text" id="lname" placeholder="Last name">
+                    
+                    <input type="text" id="lastName" placeholder="Last name">
                 </div>
                 <div class="single-input">
-                    <input required type="email" id="email" placeholder="Email address">
+                    
+                    <input type="email" id="email" placeholder="Email address">
                 </div>
                 <div class="single-input">
-                    <input required type="password" id="pass" placeholder="Password">
+                    
+                    <input type="number" id="phoneNumber" placeholder="Phone Number">
                 </div>
                 <div class="single-input">
-                    <input required type="password" id="cpass" placeholder="Confirm password">
-                </div>
+                    
+                    <input type="password" id="password" placeholder="Password">
+                </div>                
                 <div class="Submit-button">
-                    <button class="button">Submit</button>
+                    <input type="submit" value="Sign Up" id="signupButton">
                 </div>
                 <div class="account-have">
                     <a href="#">Forget password</a>
@@ -56,37 +61,76 @@
     </div>
 
     <script>
-        const Submit_button = document.querySelector(".button");
-        Submit_button.onclick = (e) => {
-            e.preventDefault();
-            //all input data received this variables
-            const fname = document.getElementById("fname").value;
-            const lname = document.getElementById("lname").value;
-            const email = document.getElementById("email").value;
-            const pass = document.getElementById("pass").value;
-            const cpass = document.getElementById("cpass").value;
+        const form = document.getElementById("signupForm");
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+        const email = document.getElementById("email");
+        const userPassword = document.getElementById("password");
+        const phoneNumber = document.getElementById("phoneNumber");
+        const signupHandler = document.getElementById("signupButton");
+        const userLocalStorage = JSON.parse(localStorage.getItem("userInfo")) || [];
 
-            //now store this data in your web browser store
-            localStorage.setItem('FirstName', fname);
-            localStorage.setItem('LastName', lname);
-            localStorage.setItem('Email', email);
-            localStorage.setItem('Password', pass);
-            localStorage.setItem('Confirm password', cpass);
+// SIGNUP FUNCTION
+signupHandler.addEventListener("click", (e) => {
+	e.preventDefault();
 
-            //now write some condition
-            if(fname == "" && lname == "" && email == "" && pass == "" && cpass == ""){
-                    alert("Opps...! Input field must be fill");
-                }
-                else
-                {
-                    if(pass !== cpass){
-                        alert("Opps...! Password not matching!");  
-                    }
-                    else{
-                        alert("Registration successful");
-                    }
-                }
-            }
+	let newUserInfo = [];
+	// console.log(firstName.value.length);
+	const validationResult = InputValidation();
+
+	if (validationResult === false) {
+		return;
+	}
+
+	const userInfo = {
+		firstName: firstName.value,
+		lastName: lastName.value,
+		email: email.value,
+		phoneNumber: phoneNumber.value,
+		userPassword: userPassword.value,
+		isLoggedIn: false,
+	};
+
+	//EMAIL VALIDATION
+	isEmailExist = userLocalStorage.find((data) => data.email === email.value);
+
+	if (!isEmailExist) {
+		if (userLocalStorage?.length !== 0) {
+			newUserInfo = [...userLocalStorage, { ...userInfo }]; // ARRAY PUSH
+		} else {
+			newUserInfo = [{ ...userInfo }];
+            alert("Registration successful");
+		}
+
+		localStorage.setItem("userInfo", JSON.stringify(newUserInfo));
+		location.reload();
+	} else {
+		alert("Email already exist");
+	}
+});
+
+// VALIDATION FUNCTION
+function InputValidation() {
+	if (firstName.value.length === 0) {
+		alert("First name is required");
+		return false;
+	} else if (lastName.value.length === 0) {
+		alert("Last name is required");
+		return false;
+	} else if (email.value.length === 0) {
+		alert("Email name is required");
+		return false;
+	} else if (lastName.value.length === 0) {
+		alert("last name is required");
+		return false;
+	}
+    else if (password.value.length === 0) {
+		alert("Password is required");
+		return false;
+	}
+}
+
+
     </script>
 </body>
 </html>
