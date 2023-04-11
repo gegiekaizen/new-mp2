@@ -5,7 +5,7 @@
   }
   
   body {
-    height: 3000px;
+
     overflow-x: hidden;
   }
   
@@ -13,6 +13,7 @@
 
 .nav-colored { background-color:blueviolet; }
 .nav-transparent { background-color:transparent;}
+
 
 .navinuput{
   color: #fff;
@@ -508,4 +509,12 @@ min-height: 100vh;
 }
 .ourproducts{
   margin-top: 20px;
+}
+/* ------------------------------------------------------------------------- */
+.card-body li {
+    list-style-type: none;
+}
+
+.root-fix {
+    margin-top: 0px !important;
 }
