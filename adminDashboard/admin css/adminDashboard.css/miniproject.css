@@ -276,11 +276,11 @@ body {
     left: 200px;
 } 
 
-.container {
+/* .container {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
+    background-color: red;
 }
-
+ */
