@@ -11,18 +11,18 @@
   
 /* NavBar */
 
-.nav-colored { background-color:blueviolet; }
-.nav-transparent { background-color:transparent;}
+.nav-colored { background-color:white; }
+
 
 
 .navinuput{
-  color: #fff;
+  color: black;
 }
 
 
   .nav-item a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 600;
     text-transform: uppercase;
     margin-right: 15px;
@@ -33,22 +33,22 @@
     }
   
   .nav-item a:hover {
-    color: green;
+    color: orange;
   }
   .dropdown-item:hover{
 
-    color:green;
+    color:orange;
   }
   
   .navbar-brand{
     font-weight: 600;
-    color: white;
+    color: black;
     font-size: 25px;
 
   }
   .navbar-brand span{
     font-weight: 600;
-    color: green;
+    color: orange;
     font-size: 25px;
 
   }
@@ -74,7 +74,7 @@
     outline: none;
     border: none;
     background-color:  gray;
-    color: white;
+    color: black;
     border-radius: 0px 10px 10px 0px;
     transition: all 0.4s;
     margin-inline-end: 2px;
@@ -83,8 +83,8 @@
   
   .btn1:hover {
     opacity: 0.8;
-    color: white;
-    border: 2px solid white;
+    color: black;
+    border: 2px solid black;
   }
   
   .bi-cart4 {
@@ -96,7 +96,7 @@
   }
   
   .bi-cart4:hover {
-    color:red;
+    color:orange;
   }
   
   .bi-person-circle {
@@ -109,7 +109,7 @@
   }
   
   .bi-person-circle:hover {
-    color: red;
+    color: orange;
   }
   
   .navbar-toggler {
@@ -165,7 +165,7 @@
     outline: none;
     border: none;
     color: white;
-    background: blueviolet;
+    background: black;
     border-radius: 50px;
     transition: all 0.4s;
   }
@@ -173,7 +173,7 @@
   .h-btn:hover{
     opacity: 0.8;
     color: white;
-    border: 4px solid blueviolet;
+    border: 4px solid black;
   }
 
  
@@ -234,10 +234,10 @@
     transition: all 0.3s ease-in-out;
 }
 .product-name:hover{
-    color: #fcb941 !important;
+    color: orange !important;
 }
 .product-price{
-    color: red;
+    color: orange;
 }
 .rating{
     font-size: 13px;
@@ -255,7 +255,7 @@
   max-height: 500px;
   padding: 0px;
   margin-bottom: 20px;
-  border: 2px solid blueviolet;
+  border: 2px solid white;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -283,7 +283,7 @@ min-height: 100vh;
 
 }
 .contact1{
-  color: white;
+  color: black;
 }
 
 
@@ -292,20 +292,20 @@ min-height: 100vh;
   width: 25%;
   outline: none;
   border: none;
-  color: white;
-  background: blueviolet;
+  color: black;
+  background: white;
   border-radius: 50px;
   transition: all 0.4s;
 }
 
 .mbtn1 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .mbtn1:hover {
   opacity: 0.8;
-  color: white;
+  color: black;
   border: 4px solid blueviolet;
 }
 
@@ -323,7 +323,7 @@ min-height: 100vh;
   outline: none;
   border: none;
   color: white;
-  background-color: blueviolet;
+  background-color: white;
   ;
   border-radius: 50px;
   margin: 0 auto;
@@ -335,11 +335,11 @@ min-height: 100vh;
 .cbtn1:hover {
   opacity: 0.8;
   color: white;
-  border: 4px solid blueviolet;
+  border: 4px solid white;
 }
  /* Footer section  */
  .bg-footer{
-  background-color:rgb(17, 75, 38);
+  background-color:orange;
   color: #ffffffd4;
  }
 
@@ -353,7 +353,7 @@ min-height: 100vh;
 .footersubmit  {
   height: 45px;
   outline: none;
-  border: 2px solid  blueviolet;
+  border: 2px solid  white;
   background-color: transparent;
   border-radius: 10px 0px 0px 10px;
 
@@ -362,7 +362,7 @@ min-height: 100vh;
   height: 45px;
   outline: none;
   border: none;
-  background-color: blueviolet;
+  background-color: white;
   color: white;
   border-radius: 0px 10px 10px 0px;
   transition: all 0.4s;
@@ -401,12 +401,12 @@ min-height: 100vh;
   margin-bottom: 15px;
 }
 .main-parent .form-wrap h1 span{
-  color: blueviolet;
+  color: white;
 }
 .main-parent .form-wrap .single-input input{
   width: 100%;
   padding: 14px 10px;
-  border: 1px solid rgba(0,0,0,0.352);
+  border: 1px solid white;
   outline: none;
   background-color: transparent;
   margin-bottom: 10px;
@@ -418,10 +418,10 @@ min-height: 100vh;
 }
 .Submit-button button{
   padding: 13px 30px;
-  background-color: blueviolet;
+  background-color: white;
   outline: none;
   border: none;
-  color: white;
+  color: black;
   font-family: sans-serif;
   font-size: 15px;
   cursor: pointer;
@@ -434,7 +434,7 @@ min-height: 100vh;
   margin-top: 10px;
 }
 .account-have a{
-  color: rgba(34,34,34);
+  color: white;
   text-decoration: none;
   font-family: sans-serif;
 }
@@ -458,7 +458,7 @@ min-height: 100vh;
   outline: none;
   border: none;
   color: white;
-  background: blueviolet;
+  background: white;
   border-radius: 50px;
   transition: all 0.4s;
 }
@@ -466,7 +466,7 @@ min-height: 100vh;
 .h-btn:hover{
   opacity: 0.8;
   color: white;
-  border: 4px solid blueviolet;
+  border: 4px solid white;
 }
 
 /* Product Page */
