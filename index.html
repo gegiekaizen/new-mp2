@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
     <!-- OwlCarousel CSS -->
     <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
@@ -71,8 +72,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
-                            <li><a class="dropdown-item" href="#">MY ACCOUNT &nbsp; &nbsp; &nbsp;</a></li>
-                            <li><a class="dropdown-item" href="LoginForm.html">Login</a></li>
+                            <li><a id="usernameDashboard"></a></li>
+                            <li><a id="logoutHandler" href="LoginForm.html">Logout</a></li>
                         </li>
                         </ul>
                     </li>
@@ -266,6 +267,9 @@
             </div>
         </div>
         <!-- End of carousel section   -->
+
+
+
     </section>
     <!--  End of Product section  -->
     <hr>
@@ -354,6 +358,8 @@
         </div>
     </section>
     <!-- End of Hero Section 2  -->
+
+
 
 
 
@@ -496,6 +502,116 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <!--  Dashboard Starts-->
+    <script>
+        const usernameDashboard = document.getElementById("usernameDashboard");
+        const user = JSON.parse(localStorage.getItem("userInfo"));
+        const logoutHandler = document.getElementById("logoutHandler");
+        console.log(user);
+
+        let userData = user.find((data) => {
+            return data.isLoggedIn === true;
+        });
+
+        console.log(userData);
+
+        usernameDashboard.innerHTML = `
+            <p>User: ${userData.firstName}</p>
+        `;
+
+        logoutHandler.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            let newData = user.map((data) => {
+                if (data.isLoggedIn === true) {
+                    return { ...userData, isLoggedIn: false };
+                } else {
+                    return data;
+                }
+            });
+
+            localStorage.setItem("userInfo", JSON.stringify(newData));
+
+            window.location.href = "LoginForm.html";
+        });
+
+    </script>
+    <!--  Dashboard ends-->
+    <!--  Add to cart Starts Here-->
+    <script>
+        const product = [];
+        const categories = [...new Set(product.map((item)=>
+            {return item}))]
+            let i=0;
+       /* document.getElementById('root').innerHTML = categories.map((item)=>
+        {
+            var {image, title, price} = item;
+            return(
+                `<div class='box'>
+                    <div class='img-box'>
+                        <img class='images' src=${image}></img>
+                    </div>
+                    <div class='bottom'>
+                        <p>${title}</p>
+                        <h2>₱ ${price}.00</h2>`+ 
+                        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+                    `</div>
+                </div>`       
+            )
+        })
+        .join('')
+        */
+        console.log(categories)
+        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
+        console.log(cart)
+        displaycart()
+        function addtocart(a){
+            
+            console.log(a)
+            cart.push({...categories[a]});
+            localStorage.setItem("cartItems",JSON.stringify(cart))
+            displaycart();
+      
+        }
+        function delElement(a){
+            cart.splice(a, 1);
+            localStorage.setItem("cartItems",JSON.stringify(cart))
+            displaycart();
+
+
+
+        }
+
+        function displaycart(a){
+            let j = 0, total=0;
+            document.getElementById("count").innerHTML=cart.length;
+            if(cart.length==0){
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₱ "+0+".00";
+            }
+            else{
+                document.getElementById('cartItem').innerHTML = cart.map((items)=>
+                {
+                    var {image, title, price} = items;
+                    total=total+price;
+                    document.getElementById("total").innerHTML = "₱ "+total+".00";
+                    return(
+                        `<div class='cart-item'>
+                            <div class=row-img'>
+                                <img class='rowimg' src=${image}>
+                            </div>
+                                <p style='font-size:12px;'>${title}</p>
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
+                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                    )
+                }).join('');
+            }
+        }
+
+    </script>
+
+    <!--  Add to cart Ends Here-->
 </body>
 
 </html>
