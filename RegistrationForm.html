@@ -112,7 +112,9 @@
                 <div class="single-input">
                     
                     <input type="password" id="password" placeholder="Password">
-                </div>                
+                </div>  
+                
+               
                 <div class="Submit-button">
                     <input type="submit" value="Sign Up" id="signupButton">
                 </div>
@@ -147,14 +149,33 @@ signupHandler.addEventListener("click", (e) => {
 		return;
 	}
 
-	const userInfo = {
+    
+    	const userInfo = {
 		firstName: firstName.value,
 		lastName: lastName.value,
 		email: email.value,
 		phoneNumber: phoneNumber.value,
 		userPassword: userPassword.value,
 		isLoggedIn: false,
+        userLevel: "user"
 	};
+    
+
+
+    /*
+        const userInfo = {
+		firstName: firstName.value,
+		lastName: lastName.value,
+		email: email.value,
+		phoneNumber: phoneNumber.value,
+		userPassword: userPassword.value,
+		isLoggedIn: false,
+        userLevel: "admin"
+	};
+
+    */
+
+    
 
 	//EMAIL VALIDATION
 	isEmailExist = userLocalStorage.find((data) => data.email === email.value);
@@ -164,11 +185,11 @@ signupHandler.addEventListener("click", (e) => {
 			newUserInfo = [...userLocalStorage, { ...userInfo }]; // ARRAY PUSH
 		} else {
 			newUserInfo = [{ ...userInfo }];
-            alert("Registration successful");
 		}
+        alert("Registration successful");
 
 		localStorage.setItem("userInfo", JSON.stringify(newUserInfo));
-		location.reload();
+		window.location.href = "LoginForm.html"
 	} else {
 		alert("Email already exist");
 	}

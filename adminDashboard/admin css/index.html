@@ -76,7 +76,7 @@
             <a href="PaymentSettings.html">Payment Settings</a>
             <a class="bus" href="businessinsight.html">Business Insight</a>
             <a class="user" href="accountUser.html">Account</a>
-            <a class="logout" href="login.html">Logout</a>
+            <a class="logout" id="isUserLogout">Logout</a>
         </div>
     </div>
     <!--------------------------End of Sidebar---------------------------------->
@@ -118,7 +118,32 @@
     <script src="datatable.min.js"></script>
     <script src="miniproject.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+    <script>
+        const user = JSON.parse(localStorage.getItem("userInfo"));
 
+        const isUserLogout = document.getElementById("isUserLogout")
+
+        
+      let userData = user.find((data) => {
+        return data.isLoggedIn === true;
+      });
+
+        isUserLogout.addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("logout")
+            let newData = user.map((data) => {
+              if (data.isLoggedIn === true) {
+                return { ...userData, isLoggedIn: false };
+              } else {
+                return data;
+              }
+            });
+    
+            localStorage.setItem("userInfo", JSON.stringify(newData));
+    
+            window.location.href = "../../../index.html";
+          });
+    </script>
 </body>
 
 </html>

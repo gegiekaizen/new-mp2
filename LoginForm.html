@@ -99,6 +99,8 @@
                 <div class="single-input">
                     <input type="password" id="password" placeholder="Password">
                 </div>
+
+               
                 <div class="Submit-button">
                     <input type="submit" value="Login" id="loginButton">
                 </div>
@@ -116,7 +118,9 @@
         const loginHandler = document.getElementById("loginButton");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
+const admin = document.getElementById("admin_log")
 const user = JSON.parse(localStorage.getItem("userInfo"));
+
 
 loginHandler.addEventListener("click", (e) => {
 	e.preventDefault();
@@ -141,7 +145,13 @@ loginHandler.addEventListener("click", (e) => {
 			localStorage.setItem("userInfo", JSON.stringify(newData));
 			console.log("login Success");
             
-			window.location.href = "index.html";
+            if (userData.userLevel === "user") {
+                window.location.href = "index.html";
+
+            }
+            else {
+                window.location.href = "./adminDashboard/admin css/index.html"
+            }
 		} 
         // FALLBACK FOR WRONG INPUT CREDENTIAL
         else{

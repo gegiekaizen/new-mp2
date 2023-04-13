@@ -24,7 +24,6 @@
 
       isUserLogout.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log("hell")
         let newData = user.map((data) => {
           if (data.isLoggedIn === true) {
             return { ...userData, isLoggedIn: false };
