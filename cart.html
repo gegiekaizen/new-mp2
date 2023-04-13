@@ -15,6 +15,8 @@
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
@@ -26,7 +28,7 @@
 
 <body>
     <!-- navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-primary pb-3  fixed-top" id="navbar-scrolled">
+    <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
         <div class="container-fluid container-nav">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
@@ -71,8 +73,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
-                            <li><a class="dropdown-item" href="#">MY ACCOUNT &nbsp; &nbsp; &nbsp;</a></li>
-                            <li><a class="dropdown-item" href="LoginForm.html">Login</a></li>
+                            <li><a id="usernameDashboard"></a></li>
+                            <li><a id="logoutHandler" href="LoginForm.html">Logout</a></li>
                         </li>
                         </ul>
                     </li>
@@ -137,7 +139,7 @@
 
 <!--  Footer   -->
 <section>
-    <div class="container-fluid" style="background-color: #6d6c6c; color: black;">
+    <div class="container-fluid">
         <div class="row footer text-left">
             <div class="col-md-5" style="padding-top: 20px;">
                 <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="200px"

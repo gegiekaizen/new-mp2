@@ -15,6 +15,8 @@
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <!-- OwlCarousel CSS -->
     <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
@@ -27,7 +29,7 @@
 
 <body> 
     <!-- navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-primary pb-3  fixed-top" id="navbar-scrolled">
+    <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
         <div class="container-fluid container-nav">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
@@ -90,8 +92,8 @@
         <main>
             <section class="homes">
                 <div class="container main-content d-flex justify-content-center align-content-center">
-                    <h2 class="homes1">THE BEST <span style="color:orange">&nbsp;PRICE</span>&nbsp; AND <span style="color:orange">&nbsp;SERVICE</span>&nbsp; YOU CAN COUNT ON </h2>
-                    <button type="button" class="h-btn">Shop now </button>
+                    <h2 class="homes1">THE BEST PRICE AND SERVICE YOU CAN COUNT ON </h2>
+                    <button type="button" class="h-btn1">Shop now </button>
                 </div>
             </section>
         </main>
@@ -99,7 +101,7 @@
 
     <!--  proposition  -->
     <section>
-        <div class="container" id="Hydro&Aero">
+        <div class="container" id="">
             <div class="row align-items-center">
                 <div class="col-md-12 col-sm-12 text-center">
                     <h2 class="display-4 mb-4" style="color: black; margin-top: 80px;"><b>Computer Parts and Accessories</b></h2>
@@ -113,7 +115,7 @@
                     <img src="./images/computers1.png" alt="" class="img-fluid pt-4 px-lg-4" width="800">
                 </div>
                 <div class="col-md-6 col-sm-12 text-center text-md-left py-5">
-                    <h2 class="display-4 mb-4" style="color: black;"><b>Custom Desktops and Work Stattions</b></h2>
+                    <h3 class="display-4 mb-4" style="color: black;"><b>Custom Desktops and Work Stattions</b></h3>
                     <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you are looking for a custom built CBS PC, business workstation or a refurbished desktop.  We can find the right system to suit any of your home, business or gaming needs.
                         Choose from our selection of top name brand PC's, or have us build a custom computer to match your specific needs.
                         Whether you are looking to purchase a basic low end desktop for internet use, document processing, and email. Or are looking for a professional desktop PC workstation for your business or even a top of the line Gaming machine, we have it all.
@@ -132,7 +134,7 @@
         <div class="container" id="">
             <div class="row align-items-center">
                 <div class="col-md-6 col-sm-12 text-center text-md-right py-5">
-                    <h2 class="display-4 mb-4" style="color: black;"><b>We also build Custom Gaming PC's</b></h2>
+                    <h3 class="display-4 mb-4" style="color: black;"><b>We also build Custom Gaming PC's</b></h3>
                     <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you have a specific list of parts or requirements for a machine, or need to something that will do a specific task, we can help set you up with what you need.
                         Come in and talk to one of our computer experts. They will help you in realizing your goals.
                     </p>
@@ -286,11 +288,9 @@
     <!-- Hero Section 2   -->
     <section>
         <div class="container-fluid py-5" id="about">
-            <div class="row py-5">
-                <div class="col-lg-5 py-5 offset-lg-7 col-md-6 col-sm-12 col-12">
-                    <h1 class="contact1"> DECADES OF SHAPING THE FUTURE</h1>
-                    <button class="mbtn1 mt-4"><a href="#">Shop Now </a></button>
-                </div>
+            <div class="container main-content d-flex justify-content-center align-content-center">
+                <h2 class="homes1">DECADES OF SHAPING THE FUTURE</h2>
+                <button type="button" class="h-btn1">Shop now </button>
             </div>
         </div>
     </section>
@@ -303,11 +303,11 @@
 
 <!--  Footer   -->
 <section>
-    <div class="container-fluid" style="background-color: #6d6c6c; color: black;">
+    <div class="container-fluid">
         <div class="row footer text-left">
             <div class="col-md-5" style="padding-top: 20px;">
-                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="200px"
-                            height="100px"></a></h2>
+                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
+                            height="50px"></a></h2>
                 <p>If you are interested to resell KLT products, please complete the Wholesale
                     Application Form and our team member will contact you.
 
@@ -363,17 +363,6 @@
     <script src="script.js"></script>
     <script src="owl_carousel/owl.carousel.js"></script>
     <script>
-        let myNav = document.getElementById('navbar-scrolled');
-        window.onscroll = function () {
-            if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
-                myNav.classList.add("nav-colored");
-                myNav.classList.remove("nav-transparent");
-            }
-            else {
-                myNav.classList.add("nav-transparent");
-                myNav.classList.remove("nav-colored");
-            }
-        };
 
 
 
