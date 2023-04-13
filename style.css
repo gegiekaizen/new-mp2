@@ -305,7 +305,7 @@ min-height: 100vh;
   font-weight: 700;
   font-size: 50px;
   color:rgba(255, 255, 255, 0.704);
-  text-shadow: 3px 3px rgba(251, 10, 10, 0.799);
+  text-shadow: 3px 3px rgba(26, 65, 40, 0.799);
 }
 .ourproducts{
   margin-top: 20px;
@@ -318,3 +318,4 @@ min-height: 100vh;
 .root-fix {
     margin-top: 0px !important;
 }
+

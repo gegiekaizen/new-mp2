@@ -123,3 +123,12 @@
     padding: 0 5rem;
   }
   /* NavBar Ends */
+
+  .user_logout {
+    color: white;
+    font-weight: 600;
+  }
+  .user_logout:hover {
+    cursor: pointer;
+    color: black;
+  }
