@@ -64,3 +64,41 @@ h2 {
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
+.table_container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.table_container img {
+    width: 150px;
+    height: 100px;
+}
+
+.text_cut {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 200px !important;
+}
+
+
+.table td.fit, 
+.table th.fit {
+    white-space: nowrap;
+    width: auto;
+    
+}
+
+.table_card {
+    /* display: flex; */
+    vertical-align: middle;
+}
+
+.ship_status {
+    padding: 10px 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: #00C86F;
+}
