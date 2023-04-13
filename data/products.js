@@ -344,7 +344,7 @@ const productData = [
 		image_main: 2,
 		description:
 			"\n\nASRock B450M STEEL LEGEND Socket AM4/ AMD Promontory B450/ DDR4/ Quad CrossFireX/ SATA3&USB3.1/ M.2\n\n\n\n•\tBrand: ASRock\n\n•\tCPU Socket: Socket AM4\n\n•\tRAM Memory Technology: DDR4\n\n•\tChipset Type: AMD B450\n\n•\tMemory Speed: 2400 MHz\n\n•\tPlatform: Windows 10\n\n•\tSeries: B450M STEEL LEGEND\n\n•\tMemory Storage Capacity: 64 GB\n\n•\tRAM Memory Maximum Size: 64 GB\n\n•\tGraphics Card Interface: PCI-E\n\n•\tSupported Motherboard: Micro ATX\n\n•\tFeatures:\n\n•\tSupports AMD AM4 Socket Ryzen™ 2000, 3000 and 5000 Series Desktop Processors\n\n•\tSupports DDR4 3533+ (OC)\n\n•\t1 PCIe 3.0 x16, 1 PCIe 2.0 x16, 1 PCIe 2.0 x1\n\n•\tAMD Quad CrossFireX™\n\n•\tGraphics Output: DisplayPort, HDMI\n\n•\t1 CH HD Audio (Realtek ALC892/897 Audio Codec)\n\n•\t4 SATA3, 1 Ultra M.2 (PCIe Gen3 x4), 1 M.2 (SATA3)\n\n•\t2 USB 3.1 Gen2 (Rear Type-A+C)\n\n•\t6 USB 3.1 Gen1 (2 Front, 4 Rear)\n\n•\tRealtek Gigabit LAN",
-		price: 6.169,
+		price: 6169,
 		stock: 300,
 		category: ["Motherboard"],
 		createdAt: {
