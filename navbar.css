@@ -132,3 +132,12 @@
     cursor: pointer;
     color: black;
   }
+
+#searchInput {
+  background-color: white;
+}
+
+#searchHandler {
+  border: 1px solid black;
+}
+

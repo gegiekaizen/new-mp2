@@ -188,25 +188,25 @@
             {
                 id: 0,
                 image: "https://tse1.mm.bing.net/th?id=OIP.DWXyej5ekYqbm5J5MqfwwwHaHa&pid=Api&P=0",
-                title: ' Ryzen 3 2200G ',
+                name: ' Ryzen 3 2200G ',
                 price: 12000,
             },
             {
                 id: 1,
                 image:"https://m.media-amazon.com/images/I/71EWMfjpMgL.jpg",
-                title: 'Core AMD Ryzen 3200G',
+                name: 'Core AMD Ryzen 3200G',
                 price: 17000,
             },
             {
                 id: 2,
                 image: "https://m.media-amazon.com/images/I/71f640EV09L._AC_SL1230_.jpg",
-                title: 'RYZEN 5 ',
+                name: 'RYZEN 5 ',
                 price: 23000,
             },
             {
                 id: 3,
                 image: 'https://microless.com/cdn/products/8516a03820effbcd368abe44649b0f5c-hi.jpg',
-                title: 'i5 intel 10400 RTX 2060',
+                name: 'i5 intel 10400 RTX 2060',
                 price: 22000,
             }
         ];
@@ -215,14 +215,14 @@
             let i=0;
         document.getElementById('root').innerHTML = categories.map((item)=>
         {
-            var {image, title, price} = item;
+            var {image, name, price} = item;
             return(
                 `<div class='box'>
                     <div class='img-box'>
                         <img class='images' src=${image}></img>
                     </div>
                     <div class='bottom'>
-                        <p>${title}</p>
+                        <p>${name}</p>
                         <h2>₱ ${price}.00</h2>`+ 
                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
                     `</div>

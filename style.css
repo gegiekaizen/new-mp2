@@ -319,3 +319,45 @@ min-height: 100vh;
     margin-top: 0px !important;
 }
 
+.category_container {
+  border-radius: 5px;
+  border: 1px solid black;
+
+}
+
+.category_container h3 {
+  padding: 10px 0;
+  background-color: orange;
+  color: white;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+
+.category_container .category_card p {
+  padding: 5px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.category_container .category_card p:hover{
+  background-color: grey;
+  cursor: pointer;
+  color: white;
+}
+
+.category_container .category_card a {
+  text-decoration: none;
+  color: black;
+}
+
+#emailInput {
+  color: black;
+  background-color: white;
+  width: 100%;
+}
+
+#sendEmailHandler {
+  border: 1px solid black;
+  width: 100px;
+}

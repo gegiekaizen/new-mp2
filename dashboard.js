@@ -8,6 +8,11 @@
       const isUserRegister = document.getElementById("isUserRegister")
       const usernameDashboard = document.getElementById("usernameDashboard")
       const isUserLogout = document.getElementById("isUserLogout")
+      const searchInput = document.getElementById("searchInput")
+      const searchHandler = document.getElementById("searchHandler")
+      const cartIcon = document.getElementById("cartIcon")
+      const countIcon = document.getElementById("count")
+
 
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
@@ -16,11 +21,38 @@
       isUserLogin.style.display = !userData ? "block" : "none" 
       isUserRegister.style.display = !userData ? "block" : "none" 
       isUserLogout.innerHTML = userData ? "Logout" : "" 
-
+      cartIcon.style.display = userData ? "block" : "none"
+      countIcon.style.display = userData ? "block" : "none"
       usernameDashboard.innerHTML = userData ? userData.email :  ""
       console.log(userData);
 
+      searchHandler.addEventListener("click", (e) => {
+        e.preventDefault()
+        console.log(productData)
+        let inputSearchValue = searchInput.value
+        if (inputSearchValue.length === 0) {
+          Toastify({
+            text: "Input required",
+            className: "info",
+            position: "center",
+            style: {
+                background: "black",
+            }
+        }).showToast();
+          return false
+        } 
 
+        console.log(searchInput.value)
+        const searchData = productData.filter(data => {
+          if(data.name.toLowerCase().indexOf(inputSearchValue) > -1)
+          {
+            return data
+          }
+        })
+        console.log(searchData)
+        localStorage.setItem("searchData", JSON.stringify(searchData))
+        location.href = "search.html"
+      })
 
       isUserLogout.addEventListener("click", (e) => {
         e.preventDefault();
