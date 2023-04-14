@@ -140,12 +140,19 @@ margin-top: 50px;
   color: #ffffffd4;
  }
 
+.news-letter {
+  line-height: 1.8 ;
+  padding: 20px;
+}
 
  .footer-item a {
   text-decoration: none;
   color: #ffffffd5;
-  margin-right: 15px;
+  line-height: 2.8 ;
   transition: all 0.4s;
+ 
+
+  
 }
 .footersubmit  {
   height: 45px;
@@ -181,6 +188,9 @@ margin-top: 50px;
   color: rgb(57, 57, 231);
 }
 
+.mailto{
+  text-decoration: none;
+}
 /* hero section  */
 .home{
   background: rgba(0,0,0,0.4)url("");

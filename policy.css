@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.container {
+    margin: 40px 80px;
+    padding: 100px;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-policy {
+    margin: 0 120px;
+    padding: 50px;
+}

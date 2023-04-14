@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Favicon CSS -->
+    <link rel="shortcut icon" href="./images/KLT-modified.png" type="image/x-icon">
+    <!-- icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="policy.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
+    <!-- Js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
+
+</head>
+
+<body>
+
+    <!-----> Messenger Chat Plugin Code
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "104583995946499");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v16.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+     <!-- navbar  -->
+     <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
+        <div class="container-fluid container-nav">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>                
+                    <li class="nav-item">
+                        <a class="nav-link" href="bundles.html">Bundles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Warranty</a>
+                    </li>
+                </ul>
+                <form class="d-flex navinput">
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                    <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                        <p id="count">0</p>
+                    <li class="nav-item dropdown-center" style="margin-top: -22px;">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropstart">
+                            <li id="usernameDashboard"></li>
+                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
+                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
+                            <li id="isUserLogout" class="user_logout"></li>
+                        </li>
+                        </ul>
+                    </li>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- End of navbar   -->
+<section class="container-policy d-flex">
+    <div class="container">
+        <h4>REFUNDS, PRODUCT RETURNS, AND EXCHANGES POLICY</h4> <br>
+        <h5>Refunds, Product Returns, and Exchanges Policy</h5> <br>
+        <h5>Guidelines for Merchandise Return/Refund per Republic Act (R.A.) 7394 or the Consumer Act of the Philippines
+        </h5>
+        <ol>
+            <li>
+             Only defective products bought from this store can be returned or exchanged. <br>
+            <br></li>
+            <li> Under the IRR (Implementing Rules and Regulations) of R.A. 7394, The Consumer Act of the Philippines, a
+            change of mind on the part of the customer does not entitle him/her to a refund or exchange. <br>
+            <br></li>
+            <li> The prohibition of the "No Return, No Exchange" does not apply if the product bought is in perfect
+            condition or has no defect. <br>
+            <br></li>
+           <li> Refund will be the last resort if the defective item under warranty can no longer be repaired or there is
+            no longer a replacement unit available at the time the warranty is being processed. <br>
+            <br></li>
+            &emsp;&emsp;Refunds are not allowed after payment for order has been made. <br>
+
+           <br> &emsp;&emsp;** Refunds can be given in special cases such as when orders are served 15 days late from date agreed upon
+            by the client and the Sales Agent
+        </ol>
+
+        <h5>What should I do if my product arrives damaged or defective, or isn't what I ordered?</h5>
+        <p>
+            If you have received products which you did not order or a damaged/defective product please do not remove any tag or take out the product from the original packaging.  Send us an email at thegorgeouscoph@gmail.com stating a brief description of your product defect, your order number, delivery receipt, and a photo or video of the defective item.
+        </p>
+        <br>
+        <p>
+            Our team will review the report and see if it is qualified to be serviced under its warranty and/or replaced. Please allow us 3-5 days to process you report. Once assessment has been made, please expect a staff from Kaizen Loft Tech to get in touch with you.
+        </p>
+        <h5>Product Replacement and/or Servicing Process</h5>
+
+        <p>
+            1. Send an email to thegorgeouscoph@gmail.com containing the following information: <br>
+            <br>
+            &emsp;&emsp;&#8226 Customer Information: Name, Contact Number, Shipping Address. <br>
+            <br>
+            &emsp;&emsp;&#8226Summary of Defective Product: must include date of receipt. <br>
+            <br>
+            &emsp;&emsp;&#8226You must include a PHOTO or a VIDEO of the product. <br>
+            <br>
+            &emsp;&emsp;&emsp;Complaint will not be entertained if no photo or video of the product is included as these are needed to prove the claims of the client.
+           <br>
+           <br>
+           2. Wait for a staff from The Gorgeous Company to confirm if your product needs servicing or replacement. You will be contacted either via email or text message <br>
+           <br>
+           3. Products in need of servicing and/or replacement should be sent to our service center located at: <br>
+           <br>
+           314-A BRGY SILANGAN CUBAO,QUEZON CITY, PHILIPPINES, 1109 <br>
+            <br>
+            &emsp;&#8226The Kaizen Loft Tech will shoulder shipping costs to and from our service center if product is proven to be defective upon the receipt of the client
+            <br> &emsp;&#8226Client will shoulder the shipping expense (to and from the service center) of products in need of servicing as long as it is under its warranty period
+        </p>
+
+        <h5>What are the conditions for returning my product(s)?</h5>
+        <p>
+            You can return your order within 7 days of receiving it. If you received items from one order in several parcels, the 7-days return period begins on the day you received the last parcel. Your product complaint must be submitted on the day that you have received the defective or wrong product.
+        </p>
+        <h5>General Return Conditions</h5>
+        <p>
+            In order for a product return to be accepted, it must meet the following conditions:
+        </p>
+        <h5>If product has just been received and is defective:</h5>
+        <p>
+            The product must be unused.
+        </p>
+        <p>
+            The product must be in its original state and packaging with the original tags attached.
+        </p>
+        <h5>If product has been used and is under the product’s warranty:</h5>
+        <p>
+            The product must be in proper and secure packaging, damages incurred during shipment to the service center is not the responsibility of The Gorgeous Company.
+        </p>
+        <h5>If wrong item is delivered:</h5>
+        <p>
+            The claim must be reported to Customer Service within the day of receipt or up to the following day.
+        </p>
+        <p>
+            The product is NOT USED or DAMAGED by misuse.
+        </p>
+        <p>
+            Tags and labels are complete and attached.
+        </p>
+        <p>
+            Take photo of the actual item delivered.
+        </p>
+        <p>
+            Returned products are inspected by our Quality Assurance Department. If there is any damage to the product as a result of a manufacturing defect or deviation from factory specifications, we undertake to replace any defective products.
+        </p>
+        <p>
+            If the defect in the product was caused by reasons other than materials quality or assembly process, the original product will be returned to you.
+        </p>
+        <h5>We do not refund products:</h5>
+        <p>
+            Damaged by abuse or negligence (exposure to chemicals, caustic substances, open flame, high heat, sharp object, etc.)
+        </p>
+        <p>
+            Damaged by misuse or activities other than the intended purpose
+        </p>
+        <p>
+            Damaged in transit by the courier
+        </p>
+        <h5>When will I get my refund?</h5>
+        <p>
+            Your refund will be processed as soon as the product you have returned is inspected by our quality assurance team and it is confirmed that it fits within our returns policy. This quality check can take up to 2 weeks, though generally less.
+        </p>
+        <p>
+            Once the return has been approved, it takes 2 to 5 days for the refund to be made by The Gorgeous Company to your payment services provider (i.e. to your bank). Please note that the time taken for a payment services provider to provide you with your refund can vary depending upon the provider.
+        </p>
+        <h5>When will you receive my return package?</h5>
+        <p>
+            After you drop off your return package at the local drop off point, it can take 2 - 5 business days for the package to get to our service center. Unfortunately, we cannot control how long it will take for your returned products to be delivered back to us.
+        </p>
+    </div>
+</section>
+<!--  Footer   -->
+<section>
+    <div class="container-fluid">
+        <div class="row footer text-left">
+            <div class="col-md-5" style="padding-top: 20px;">
+                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
+                <p>If you are interested to resell KLT products, please email us at <br>
+                    <a href = "mailto: ggdd06112008@gmail.com" style="text-decoration:none;color: white;""><b>ggdd06112008@gmail.com</b></a>
+
+                    <br><br>Address:
+                    <br>314-A 15th Ave Brgy Silangan Cubao, Quezon City, Philippines 1109
+                </p>
+
+                <div class="col-3" class="socialmedia">
+                    <a href="https://www.facebook.com/profile.php?id=100091747692844"><span><i class="fa-brands fa-facebook"></i></span></a>
+                    <a href="https://www.instagram.com/kaizen_loft_tech/"><span><i class="fa-brands fa-instagram"></i></span></a>
+                    <a href="https://twitter.com/KaizenLoftTech"><span><i class="fa-brands fa-twitter"></i></span></a>
+                </div>
+
+            </div>
+            <div class="col-md-4" style="padding-top: 20px;">
+                <h4><u><b>Customer Service</b></u></h4>
+                <ul class="footer">
+
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Terms of Service</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="policy.html">Return Policy</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Wholesale Application</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3" style="padding-top: 20px;">
+                <h4><u><b>Newsletter</b></u></h4>
+                <p class="news-letter">Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                    more.</p>
+                <form class="d-flex">
+                    <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                    <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
+                </form>
+            </div>
+        </div>
+</section>
+<!--  End of Footer -->
+
+
+</body>
+
+</html>
