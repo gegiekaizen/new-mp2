@@ -42,7 +42,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
@@ -65,11 +65,10 @@
 
                 </ul>
                 <form class="d-flex navinput">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
-                    <p id="count">0</p>
-
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                    <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                        <p id="count">0</p>
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,26 +106,18 @@
             <!--Sidebar start-->
             <div class="row productpage text-center">
                 <div class="col-md-3" style="padding-top: 20px;">
-                    <ul class="">
-                        <p>
-                            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#components" aria-expanded="false" aria-controls="collapseExample">
-                                Categories
-                            </button>
-                        </p>
-                        <div class="collapse" id="components">
-                            <div class="card card-body">
-                                <li><a href="product.html" class="dropdown-item">All</a></li>
-                                <li><a href="graphic.html" class="dropdown-item">Graphic Cards</a></li>
-                                <li><a href="memory.html" class="dropdown-item">Memory</a></li>
-                                <li><a href="motherboards.html" class="dropdown-item">Motherboards</a></li>
-                                <li><a href="power.html" class="dropdown-item">Power Supply</a></li>
-                                <li><a href="processor.html" class="dropdown-item">Processors</a></li>
-                                <li><a href="monitor.html" class="dropdown-item">Monitor</a></li>
-                            </div>
+                    <div class="category_container">
+                        <h3>Categories</h3>
+                        <div class="category_card">
+                            <a href="product.html"><p>All</p></a>
+                            <a href="graphic.html"><p>Graphics Card</p></a>
+                            <a href="memory.html"><p>HHD/SSD</p></a>
+                            <a href="motherboards.html"><p>Motherboard</p></a>
+                            <a href="power.html"><p>Power Supply</p></a>
+                            <a href="processor.html"><p>CPU</p></a>
+                            <a href="monitor.html"><p>Monitor</p></a>
                         </div>
-              
-                    </ul>
+                    </div>
 
                 </div>
                 <!--Sidebar end-->
@@ -152,57 +143,60 @@
     <!--  End of Components Product section  -->
 
 
-<!--  Footer   -->
-<section>
-    <div class="container-fluid">
-        <div class="row footer text-left">
-            <div class="col-md-6" style="padding-top: 20px;">
-                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
-                            height="50px"></a></h2>
-                <p>If you are interested to resell KLT products, please complete the Wholesale
-                    Application Form and our team member will contact you.
+    <!--  Footer   -->
+    <section>
+        <div class="container-fluid">
+            <div class="row footer text-left">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
+                    <p>If you are interested to resell KLT products, please complete the Wholesale
+                        Application Form and our team member will contact you.
 
-                    <br>If you have any questions please contact us at
-                    <br><u><b>info@klt.com</b></u>
-                    <br>Address:
-                    <br>Philippines
-                </p>
+                        <br><br>If you have any questions please contact us at
+                        <br><u><b>info@klt.com</b></u>
 
-                
+                        <br><br>Address:
+                        <br>Philippines
+                    </p>
 
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Customer Service</b></u></h4>
-                <ul class="footer">
+                    <div class="col-3">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                    </div>
 
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Terms of Service</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Return Policy</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Wholesale Application</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Follow Us</b></u></h4>
-                <div class="col-3 social">
-                    <a href="https://www.facebook.com/"><span><i class="fa-brands fa-facebook"></i></span></a>
-                    <br>
-                    <a href="https://www.instagram.com/"><span><i class="fa-brands fa-instagram"></i></span></a>
-                    <br>
-                    <a href="https://twitter.com/"><span><i class="fa-brands fa-twitter"></i></span></a>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <h4><u><b>Customer Service</b></u></h4>
+                    <ul class="footer">
+
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Return Policy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Wholesale Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="padding-top: 20px;">
+                    <h4><u><b>Newsletter</b></u></h4>
+                    <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                        more.</p>
+                    <form class="d-flex">
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--  End of Footer -->
+    </section>
+    <!--  End of Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -313,6 +307,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
         <script src="dashboard.js"></script>
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>REWARDS</title>
+    <title>Chasis Fan</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -17,13 +17,19 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
 
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -39,7 +45,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
@@ -62,11 +68,10 @@
 
                 </ul>
                 <form class="d-flex navinput">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
-                    <p id="count">0</p>
-
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                    <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                        <p id="count">0</p>
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
@@ -268,8 +273,8 @@
                     <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
                         more.</p>
                     <form class="d-flex">
-                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email">
-                        <button class="btnfooter me-2 px-3" type="submit">Submit</button>
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
                     </form>
                 </div>
             </div>
@@ -285,71 +290,104 @@
 
 
     <!--  Add to cart Starts Here-->
+    <script src="./data/products.js"></script>
+    <script src="dashboard.js"></script>
+
+
     <script>
-        const product = [];
-        const categories = [...new Set(product.map((item)=>
-            {return item}))]
-            let i=0;
-       /* document.getElementById('root').innerHTML = categories.map((item)=>
-        {
-            var {image, title, price} = item;
-            return(
-                `<div class='box'>
-                    <div class='img-box'>
-                        <img class='images' src=${image}></img>
-                    </div>
-                    <div class='bottom'>
-                        <p>${title}</p>
-                        <h2>₱ ${price}.00</h2>`+ 
-                        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-                    `</div>
-                </div>`       
-            )
-        })
-        .join('')
-        */
-        console.log(categories)
-        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
-        console.log(cart)
-        displaycart()
-        function addtocart(a){
-            
-            console.log(a)
-            cart.push({...categories[a]});
-            localStorage.setItem("cartItems",JSON.stringify(cart))
-            displaycart();
-      
-        }
-        function delElement(a){
-            cart.splice(a, 1);
-            localStorage.setItem("cartItems",JSON.stringify(cart))
-            displaycart();
+        console.log(productData)
 
-
-
-        }
-
-        function displaycart(a){
-            let j = 0, total=0;
-            document.getElementById("count").innerHTML=cart.length;
-            if(cart.length==0){
-                document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₱ "+0+".00";
+        //const categories = [...new Set(product.map((item)=>
+        //    {return item}))]
+        function displayProduct( ) {
+            if (productData) {
+                let i = 0;
+                document.getElementById('root').innerHTML = productData.map((item) => {
+                    var { image, title, price, image_main, name, _id } = item;
+                    return (
+                        `<div class='box'>
+                            <div class='img-box'>
+                                <img class='images' src=${image}></img>
+                            </div>
+                            <div class='bottom'>
+                                <p class='product-title'>${name}</p>
+                                <h2>₱ ${price}.00</h2>
+                                
+                                <button onclick='addtocart("${_id.$oid}")'>Add to cart</button>
+                            </div>
+                        </div>`
+                    )
+                })
+                    .join('')
             }
-            else{
-                document.getElementById('cartItem').innerHTML = cart.map((items)=>
-                {
-                    var {image, title, price} = items;
-                    total=total+price;
-                    document.getElementById("total").innerHTML = "₱ "+total+".00";
-                    return(
+   
+           
+        }
+
+        displayProduct()
+
+
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        displaycart()
+        function addtocart(id) {
+            if (!userData) {
+                alert("You must logged in to add cart. will be redirected to login page")
+                location.href = "LoginForm.html"
+                return false
+            }
+            /* TOASTER NOTIF OF ADDING CART */
+       
+            Toastify({
+                text: "Product Added to Cart",
+                className: "info",
+                position: "center",
+                style: {
+                    background: "black",
+                }
+            }).showToast();
+            /* ------------------------ */
+            const findProduct = productData.find(item => item._id.$oid === id)
+            console.log(findProduct)
+            if (cart.length !== 0) {
+                console.log("this")
+                cart = [...cart, { ...findProduct }]
+
+            } else {
+                cart = [{ ...findProduct }]
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cart))
+            displaycart();
+
+        }
+        function delElement(a) {
+            cart.splice(a, 1);
+            localStorage.setItem("cartItems", JSON.stringify(cart))
+            displaycart();
+
+
+
+        }
+
+        function displaycart(a) {
+            let j = 0, total = 0;
+            document.getElementById("count").innerHTML = cart.length;
+            if (cart.length == 0) {
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₱ " + 0 + ".00";
+            }
+            else {
+                document.getElementById('cartItem').innerHTML = cart.map((items) => {
+                    var { image, title, price } = items;
+                    total = total + price;
+                    document.getElementById("total").innerHTML = "₱ " + total + ".00";
+                    return (
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
-                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>` +
+                        "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
                     )
                 }).join('');
             }
@@ -358,11 +396,17 @@
     </script>
 
     <!--  Add to cart Ends Here-->
+    
+        <!-- CDN FOR FOOTER  -->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="emailJS.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
+
 </body>
 
 </html>

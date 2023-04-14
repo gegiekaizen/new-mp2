@@ -60,8 +60,8 @@
         }(document, 'script', 'facebook-jssdk'));
     </script> 
 
-    <!-- navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
+     <!-- navbar  -->
+     <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
         <div class="container-fluid container-nav">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
@@ -71,14 +71,14 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Product</a>
-                    </li>
+                    </li>                
                     <li class="nav-item">
                         <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
@@ -89,30 +89,28 @@
                         <a class="nav-link" href="warranty.html">Warranty</a>
                     </li>
 
-
+                    
 
 
                 </ul>
                 <form class="d-flex navinput">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
-                    <p id="count">0</p>
-
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                    <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                        <p id="count">0</p>
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle"></i>
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li id="usernameDashboard"></li>
-                            <li class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a>
-                            </li>
-                            <li class="removeLogin" id="isUserLogin"><a href="LoginForm.html">Login</a></li>
+                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
+                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
                             <li id="isUserLogout" class="user_logout"></li>
-                    </li>
-                    </ul>
+                        </li>
+                        </ul>
                     </li>
 
                 </form>
@@ -126,7 +124,7 @@
             <section class="homes">
                 <div class="container main-content d-flex justify-content-center align-content-center">
                     <h2 class="homes1">THE BEST PRICE AND SERVICE YOU CAN COUNT ON </h2>
-                    <a href="product.html"></a><button type="button" class="h-btn1">Shop now </button></a>
+                    <button type="button" class="h-btn1"><a href="product.html">Shop now</a></button>
                 </div>
             </section>
         </main>
@@ -134,23 +132,25 @@
 
     <!--  proposition  -->
     <section>
-        <div class="container" id="">
-            <div class="row align-items-center">
-                <div class="col-md-12 col-sm-12 text-center">
-                    <h2 class="display-4 mb-4" style="color: black; margin-top: 80px;"><b>Computer Parts and
-                            Accessories</b></h2>
+
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="display-4" id="productTitle"><b>Computer Parts and
+                        Accessories</b></h1>
                 </div>
+                <hr>
             </div>
         </div>
         <!--Starts Here-->
-        <div class="container" id="">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 col-sm-12 text-center">
                     <img src="./images/computers1.png" alt="" class="img-fluid pt-4 px-lg-4" width="800">
                 </div>
                 <div class="col-md-6 col-sm-12 text-center text-md-left py-5">
-                    <h3 class="display-4 mb-4" style="color: black;"><b>Custom Desktops and Work Stattions</b></h3>
-                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you are looking for a custom
+                    <h3 class="display-4 mb-4" id="productTitle"><b>Custom Desktops and Work Stations</b></h3>
+                    <p class="about mb-3 px-3 mx-3" id="description"><b>Whether you are looking for a custom
                         built CBS PC, business workstation or a refurbished desktop. We can find the right system to
                         suit any of your home, business or gaming needs.
                         Choose from our selection of top name brand PC's, or have us build a custom computer to match
@@ -159,31 +159,21 @@
                         processing, and email. Or are looking for a professional desktop PC workstation for your
                         business or even a top of the line Gaming machine, we have it all.
                         All of the Desktops feature top of the line brand quality parts and we sell and service all
-                        makes and models.
-                        Our desktops also come with optional extended warranties when you make your purchase and we have
-                        a wide variety of accessories in stock as well.
-                        The size and relatively low cost of desktop computers make computer applications and Internet
-                        access available to home and small business users ewverywhere.
-                        Compared to laptop computers, larger desktop machines allow users to more easily upgrade the
-                        devices with larger, less-expensive components.
-                        When assembling our Custom PC series computers. We use only the top brand manufacturers and
-                        assure quality parts for every computer. We guarantee a long lasting quality computer for your
-                        home or office.
+                        makes and models.</b>
                     </p>
                 </div>
             </div>
         </div>
-        <hr class="my-4">
         <!--Ends Here-->
         <!--Starts Here-->
-        <div class="container" id="">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 col-sm-12 text-center text-md-right py-5">
-                    <h3 class="display-4 mb-4" style="color: black;"><b>We also build Custom Gaming PC's</b></h3>
-                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you have a specific list of
+                    <h3 class="display-4 mb-4" id="productTitle"><b>We also build Custom Gaming PC's</b></h3>
+                    <p class="about mb-3 px-3 mx-3" id="description"><b>Whether you have a specific list of
                         parts or requirements for a machine, or need to something that will do a specific task, we can
                         help set you up with what you need.
-                        Come in and talk to one of our computer experts. They will help you in realizing your goals.
+                        Come in and talk to one of our computer experts. They will help you in realizing your goals.</b>
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-12 text-center">
@@ -199,180 +189,141 @@
 
     <!-- Product section   -->
     <section>
-        <!--Start of Carousel section-->
+    <!--Best Sellers-->  
         <div class="container-fluid">
-            <div class="row my-5">
-                <h1 class="product">Best Sellers</h1>
-            </div>
-            <div class="row mx-auto owl-carousel owl-theme">
-                <div class="col product-item mx-auto">
-
-                    <div class="product-img">
-                        <img src="./images/components.jpg" alt="image" class="img-fluid d-block mx-auto">
-                        <span class="heart-icon">
-                            <i class="far fa-heart"></i>
-                        </span>
-                        <div class="row btns w-100 mx-auto text-center">
-                            <button type="button" class="col-12 py-1">
-                                <a href="product.html"><i class="fa fa-cart-plus"></i>&nbsp;Shop Now</a>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-info p-3">
-                        <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">COMPONENTS</a>
-
-                    </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="display-4" id="productTitle"><b>Best Sellers</b></h1>
                 </div>
-
-                <div class="col product-item mx-auto">
-                    <div class="product-img">
-                        <img src="./images/peripherals.jpg" alt="image" class="img-fluid d-block mx-auto">
-                        <span class="heart-icon">
-                            <i class="far fa-heart"></i>
-                        </span>
-                        <div class="row btns w-100 mx-auto text-center">
-                            <button type="button" class="col-12 py-1">
-                                <a href="product.html"><i class="fa fa-cart-plus"></i>&nbsp;Shop Now</a>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-info p-3">
-                        <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">PERIPHERALS</a>
-
-                    </div>
-                </div>
-                <div class="col product-item mx-auto">
-                    <div class="product-img">
-                        <img src="./images/pngtree-cartoon-gaming-accessories-accessory-professional-png-image_4688166.png"
-                            alt="image" class="img-fluid d-block mx-auto">
-                        <span class="heart-icon">
-                            <i class="far fa-heart"></i>
-                        </span>
-                        <div class="row btns w-100 mx-auto text-center">
-                            <button type="button" class="col-12 py-1">
-                                <a href="product.html"><i class="fa fa-cart-plus"></i>&nbsp;Shop Now</a>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-info p-3">
-                        <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">ACCESSORIES</a>
-
-                    </div>
-                </div>
-                <div class="col product-item mx-auto">
-                    <div class="product-img">
-                        <img src="./images/os and software.png" alt="image" class="img-fluid d-block mx-auto">
-                        <span class="heart-icon">
-                            <i class="far fa-heart"></i>
-                        </span>
-                        <div class="row btns w-100 mx-auto text-center">
-                            <button type="button" class="col-12 py-1">
-                                <a href="product.html"><i class="fa fa-cart-plus"></i>&nbsp;Shop Now</a>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-info p-3">
-                        <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">OS & SOFTWARES</a>
-
-                    </div>
-                </div>
-                <div class="col product-item mx-auto">
-                    <div class="product-img">
-                        <img src="./images/laptop devices.png" alt="image" class="img-fluid d-block mx-auto">
-                        <span class="heart-icon">
-                            <i class="far fa-heart"></i>
-                        </span>
-                        <div class="row btns w-100 mx-auto text-center">
-                            <button type="button" class="col-12 py-1">
-                                <a href="product.html"><i class="fa fa-cart-plus"></i>&nbsp;Shop Now</a>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-info p-3">
-                        <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">LAPTOP DEVICES</a>
-
-                    </div>
-                </div>
-
+                <hr>
             </div>
         </div>
-        <!-- End of carousel section   -->
-
-
-
+    <!--Cards starts here-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/graphicscard.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>GRAPHICS CARD</b></h4>
+                            <a href="graphic.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/ssdhhd.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>HHD/SSD</b></h4>
+                            <a href="memory.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/motherboard.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>MOTHERBOARD</b></h4>
+                            <a href="motherboards.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/powersupply.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>POWER SUPPLY</b></h4>
+                            <a href="power.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/cpu.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>CPU</b></h4>
+                            <a href="processor.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/monitor.png">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>MONITOR</b></h4>
+                            <a href="monitor.html" class="btn btn-outline-secondary">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    <!--Cards Ends here-->
     </section>
-    <!--  End of Product section  -->
-    <hr>
-    <!--  About us   -->
+    <!-- Product section end  -->
 
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-    <!--  End of About us  -->
 
     <!-- Hero Section 2   -->
     <section>
         <div class="container-fluid py-5" id="about">
             <div class="container main-content d-flex justify-content-center align-content-center">
                 <h2 class="homes1">DECADES OF SHAPING THE FUTURE</h2>
-                <a href="product.html"></a><button type="button" class="h-btn1">Shop now </button></a>
+                <button type="button" class="h-btn1"><a href="product.html">Shop now</a></button>
             </div>
         </div>
     </section>
     <!-- End of Hero Section 2  -->
 
-<!--  Footer   -->
-<section>
-    <div class="container-fluid">
-        <div class="row footer text-left">
-            <div class="col-md-6" style="padding-top: 20px;">
-                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
-                            height="50px"></a></h2>
-                <p>If you are interested to resell KLT products, please complete the Wholesale
-                    Application Form and our team member will contact you.
+    <!--  Footer   -->
+    <section>
+        <div class="container-fluid">
+            <div class="row footer text-left">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
+                    <p>If you are interested to resell KLT products, please complete the Wholesale
+                        Application Form and our team member will contact you.
 
-                    <br>If you have any questions please contact us at
-                    <br><u><b>info@klt.com</b></u>
-                    <br>Address:
-                    <br>Philippines
-                </p>
+                        <br><br>If you have any questions please contact us at
+                        <br><u><b>info@klt.com</b></u>
 
-                
+                        <br><br>Address:
+                        <br>Philippines
+                    </p>
 
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Customer Service</b></u></h4>
-                <ul class="footer">
+                    <div class="col-3" class="socialmedia">
+                        <a href="https://www.facebook.com"><span><i class="fa-brands fa-facebook"></i></span></a>
+                        <a href="https://www.instagram.com"><span><i class="fa-brands fa-instagram"></i></span></a>
+                        <a href="https://www.twitter.com"><span><i class="fa-brands fa-twitter"></i></span></a>
+                    </div>
 
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Terms of Service</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Return Policy</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Wholesale Application</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Follow Us</b></u></h4>
-                <div class="col-3 social">
-                    <a href="https://www.facebook.com/"><span><i class="fa-brands fa-facebook"></i></span></a>
-                    <br>
-                    <a href="https://www.instagram.com/"><span><i class="fa-brands fa-instagram"></i></span></a>
-                    <br>
-                    <a href="https://twitter.com/"><span><i class="fa-brands fa-twitter"></i></span></a>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <h4><u><b>Customer Service</b></u></h4>
+                    <ul class="footer">
+
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Return Policy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Wholesale Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="padding-top: 20px;">
+                    <h4><u><b>Newsletter</b></u></h4>
+                    <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                        more.</p>
+                    <form class="d-flex">
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

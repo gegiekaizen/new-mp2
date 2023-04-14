@@ -28,65 +28,64 @@
 
 <body>
 
-    <!-- navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
-        <div class="container-fluid container-nav">
-            <a class="navbar-brand" href="index.html">
-                <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>                
-                    <li class="nav-item">
-                        <a class="nav-link" href="bundles.html">Bundles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="rewards.html">Rewards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="warranty.html">Warranty</a>
-                    </li>
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
+    <div class="container-fluid container-nav">
+        <a class="navbar-brand" href="index.html">
+            <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Product</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="bundles.html">Bundles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rewards.html">Rewards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="warranty.html">Warranty</a>
+                </li>
+
+                
 
 
-                </ul>
-                <form class="d-flex navinput">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+            </ul>
+            <form class="d-flex navinput">
+                <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
                     <p id="count">0</p>
-
-                    <li class="nav-item dropdown-center" style="margin-top: -22px;">
-                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-person-circle"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropstart">
-                            <li id="usernameDashboard"></li>
-                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
-                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
-                            <li id="isUserLogout" class="user_logout"></li>
-                        </li>
-                        </ul>
+                <li class="nav-item dropdown-center" style="margin-top: -22px;">
+                    <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-person-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropstart">
+                        <li id="usernameDashboard"></li>
+                        <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
+                        <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
+                        <li id="isUserLogout" class="user_logout"></li>
                     </li>
+                    </ul>
+                </li>
 
-                </form>
-            </div>
+            </form>
         </div>
-    </nav>
-    <!-- End of navbar   -->
+    </div>
+</nav>
+<!-- End of navbar   -->
 
     <!-- hero section  -->
     <main>
@@ -123,57 +122,60 @@
 </div>
 <!--  Checkout section  -->
 
-<!--  Footer   -->
-<section>
-    <div class="container-fluid">
-        <div class="row footer text-left">
-            <div class="col-md-6" style="padding-top: 20px;">
-                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
-                            height="50px"></a></h2>
-                <p>If you are interested to resell KLT products, please complete the Wholesale
-                    Application Form and our team member will contact you.
+    <!--  Footer   -->
+    <section>
+        <div class="container-fluid">
+            <div class="row footer text-left">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
+                    <p>If you are interested to resell KLT products, please complete the Wholesale
+                        Application Form and our team member will contact you.
 
-                    <br>If you have any questions please contact us at
-                    <br><u><b>info@klt.com</b></u>
-                    <br>Address:
-                    <br>Philippines
-                </p>
+                        <br><br>If you have any questions please contact us at
+                        <br><u><b>info@klt.com</b></u>
 
-                
+                        <br><br>Address:
+                        <br>Philippines
+                    </p>
 
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Customer Service</b></u></h4>
-                <ul class="footer">
+                    <div class="col-3">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                    </div>
 
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Terms of Service</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Return Policy</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Wholesale Application</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Follow Us</b></u></h4>
-                <div class="col-3 social">
-                    <a href="https://www.facebook.com/"><span><i class="fa-brands fa-facebook"></i></span></a>
-                    <br>
-                    <a href="https://www.instagram.com/"><span><i class="fa-brands fa-instagram"></i></span></a>
-                    <br>
-                    <a href="https://twitter.com/"><span><i class="fa-brands fa-twitter"></i></span></a>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <h4><u><b>Customer Service</b></u></h4>
+                    <ul class="footer">
+
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Return Policy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Wholesale Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="padding-top: 20px;">
+                    <h4><u><b>Newsletter</b></u></h4>
+                    <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                        more.</p>
+                    <form class="d-flex">
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--  End of Footer -->
+    </section>
+    <!--  End of Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -183,54 +185,104 @@
 
 
     <!--  Add to cart Starts Here-->
+    <script src="./data/products.js"></script>
+    <script src="dashboard.js"></script>
+
+
     <script>
-        const product = [];
-        const categories = [...new Set(product.map((item)=>
-            {return item}))]
-            let i=0;
-    
-        console.log(categories)
-        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
-        console.log(cart)
-        displaycart()
-        function addtocart(a){
-            
-            console.log(a)
-            cart.push({...categories[a]});
-            localStorage.setItem("cartItems",JSON.stringify(cart))
-            displaycart();
-      
-        }
-        function delElement(a){
-            cart.splice(a, 1);
-            localStorage.setItem("cartItems",JSON.stringify(cart))
-            displaycart();
+        console.log(productData)
 
-
-
-        }
-
-        function displaycart(a){
-            let j = 0, total=0;
-            document.getElementById("count").innerHTML=cart.length;
-            if(cart.length==0){
-                document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₱ "+0+".00";
+        //const categories = [...new Set(product.map((item)=>
+        //    {return item}))]
+        function displayProduct( ) {
+            if (productData) {
+                let i = 0;
+                document.getElementById('root').innerHTML = productData.map((item) => {
+                    var { image, title, price, image_main, name, _id } = item;
+                    return (
+                        `<div class='box'>
+                            <div class='img-box'>
+                                <img class='images' src=${image}></img>
+                            </div>
+                            <div class='bottom'>
+                                <p class='product-title'>${name}</p>
+                                <h2>₱ ${price}.00</h2>
+                                
+                                <button onclick='addtocart("${_id.$oid}")'>Add to cart</button>
+                            </div>
+                        </div>`
+                    )
+                })
+                    .join('')
             }
-            else{
-                document.getElementById('cartItem').innerHTML = cart.map((items)=>
-                {
-                    var {image, name, price, image_main} = items;
-                    total=total+price;
-                    document.getElementById("total").innerHTML = "₱ "+total+".00";
-                    return(
+   
+           
+        }
+
+        displayProduct()
+
+
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        displaycart()
+        function addtocart(id) {
+            if (!userData) {
+                alert("You must logged in to add cart. will be redirected to login page")
+                location.href = "LoginForm.html"
+                return false
+            }
+            /* TOASTER NOTIF OF ADDING CART */
+       
+            Toastify({
+                text: "Product Added to Cart",
+                className: "info",
+                position: "center",
+                style: {
+                    background: "black",
+                }
+            }).showToast();
+            /* ------------------------ */
+            const findProduct = productData.find(item => item._id.$oid === id)
+            console.log(findProduct)
+            if (cart.length !== 0) {
+                console.log("this")
+                cart = [...cart, { ...findProduct }]
+
+            } else {
+                cart = [{ ...findProduct }]
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cart))
+            displaycart();
+
+        }
+        function delElement(a) {
+            cart.splice(a, 1);
+            localStorage.setItem("cartItems", JSON.stringify(cart))
+            displaycart();
+
+
+
+        }
+
+        function displaycart(a) {
+            let j = 0, total = 0;
+            document.getElementById("count").innerHTML = cart.length;
+            if (cart.length == 0) {
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₱ " + 0 + ".00";
+            }
+            else {
+                document.getElementById('cartItem').innerHTML = cart.map((items) => {
+                    var { image, title, price } = items;
+                    total = total + price;
+                    document.getElementById("total").innerHTML = "₱ " + total + ".00";
+                    return (
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
-                                <p style='font-size:12px;width:500px;'>${name}</p>
-                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
-                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                                <p style='font-size:12px;'>${title}</p>
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>` +
+                        "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
                     )
                 }).join('');
             }
@@ -240,10 +292,6 @@
 
     <!--  Add to cart Ends Here-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
 </body>
 
 </html>

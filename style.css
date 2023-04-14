@@ -50,84 +50,23 @@
     border-radius: 50px;
     transition: all 0.4s;
   }
-  
   .h-btn1:hover{
     opacity: 0.8;
     color: orange;
     border: 2px solid white;
   }
-
- 
-/* Owl Carousel section  */
-.product{
-    text-align: center;
-    padding-top: 25px;
-    margin-bottom: -30px;
-    font-weight: 600;
-}
-
-.product-item{
-    border: 1px solid rgb(219, 219, 219);
-}
-.product-img{
-    position: relative;
-    overflow: hidden;
-}
-.btns{
-    position: absolute;
-    left: 0;
-    bottom: -100%;
-    font-size: 15px;
-    font-weight: 300;
-    transition: all 0.3s ease-in-out;
-}
-.btns button{
+  .h-btn1 a{
+    outline: none;
     border: none;
-    background-color: rgb(39,39,39);
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-.btns button:hover{
-    color: #fcb941 ;
-}
-.btns button a{
-    color: #ffffff;
+    color: white;
     text-decoration: none;
-
-}
-.btns button a:hover{
-    color: #fcb941 ;
-}
-.product-img:hover .btns{
-    bottom: 0;
-}
-.heart-icon{
-    position: absolute;
-    top: 16px;
-    right: 15px;
-    font-size: 18px;
-}
-.product-type{
-    font-size: 13px;
+    transition: all 0.4s;
+  }
+  
+  .h-btn1 a:hover{
     opacity: 0.8;
-}
-.product-name{
-    transition: all 0.3s ease-in-out;
-}
-.product-name:hover{
-    color: orange !important;
-}
-.product-price{
     color: orange;
-}
-.rating{
-    font-size: 13px;
-}
-.product-item{
-    max-width: 300px;
-    max-height: 500px;
-    padding: 0px;
-}
+  }
 
 /* Featured Products  */
 
@@ -161,16 +100,13 @@ background-position:center;
 background-size: cover;
 background-repeat: no-repeat;
 min-height: 100vh;
+margin-top: 50px;
 
 }
 .contact1{
   color: white;
   text-align: center;
 }
-
-
-
-
 
 /* Contact us */
 .contact h1 {
@@ -186,7 +122,6 @@ min-height: 100vh;
   border: none;
   color: white;
   background-color: white;
-  ;
   border-radius: 50px;
   margin: 0 auto;
   display: block;
@@ -240,6 +175,10 @@ min-height: 100vh;
   font-size: 2.5rem;
   cursor: pointer;
   padding-right: 5px;
+  color: white;
+}
+.fa-brands:hover{
+  color: rgb(57, 57, 231);
 }
 
 /* hero section  */
@@ -288,6 +227,29 @@ min-height: 100vh;
   color:rgba(255, 255, 255, 0.704);
   text-shadow: 3px 3px rgba(26, 65, 40, 0.799);
 }
+#description{
+text-align: justify;
+ font-size: 20px;
+}
+/* Best Sellers starts */
+.card{
+  margin-bottom: 50px;
+  border: 2px solid black;
+  text-align: center;
+}
+.btn{
+  background-color: gray;
+  color: white;
+}
+.btn:hover{
+  color: orange;
+}
+#productTitle{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Best Sellers ends */
+
 
 /* Product Details Page */
 .product-details{
