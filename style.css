@@ -333,3 +333,11 @@ text-align: justify;
   border: 1px solid black;
   width: 100px;
 }
+@media screen and (max-width: 600px) {
+  .homes {
+    min-height: 90vh;
+  }
+  #about {
+    
+  }
+}

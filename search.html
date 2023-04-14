@@ -221,13 +221,18 @@
 
     <script>
         console.log(productData)
+        const searchData = JSON.parse(localStorage.getItem("searchData"))
+        console.log(searchData)
 
-        //const categories = [...new Set(product.map((item)=>
-        //    {return item}))]
-        function displayProduct( ) {
-            if (productData) {
+        function displayProduct() {
+            if (searchData.length === 0) {
+                document.getElementById('root').innerHTML = "<h3>No item found</h3>"
+                return false
+            }
+
+            if (searchData) {
                 let i = 0;
-                document.getElementById('root').innerHTML = productData.map((item) => {
+                document.getElementById('root').innerHTML = searchData.map((item) => {
                     var { image, title, price, image_main, name, _id } = item;
                     return (
                         `<div class='box'>
@@ -244,12 +249,14 @@
                     )
                 })
                     .join('')
+                return false
             }
-   
-           
+
         }
 
         displayProduct()
+
+
 
 
         let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
