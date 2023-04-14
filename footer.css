@@ -7,6 +7,12 @@
 .footer{
   background-color: #6d6c6c;
   color: white;
+  text-align: left;
+}
+.footer h4{
+  background-color: #6d6c6c;
+  color: white;
+  text-align: left;
 }
 
 
