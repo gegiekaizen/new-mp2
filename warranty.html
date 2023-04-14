@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart</title>
+    <title>Chasis Fan</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -17,13 +17,19 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
 
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -39,14 +45,14 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Product</a>
-                    </li>                
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
@@ -57,29 +63,29 @@
                         <a class="nav-link" href="warranty.html">Warranty</a>
                     </li>
 
-                    
+
 
 
                 </ul>
                 <form class="d-flex navinput">
-                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
-                    <p id="count">0</p>
-
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search" id="searchInput">
+                    <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                        <p id="count">0</p>
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-person-circle"></i>
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li id="usernameDashboard"></li>
-                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
-                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
+                            <li class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a>
+                            </li>
+                            <li class="removeLogin" id="isUserLogin"><a href="LoginForm.html">Login</a></li>
                             <li id="isUserLogout" class="user_logout"></li>
-                        </li>
-                        </ul>
+                    </li>
+                    </ul>
                     </li>
 
                 </form>
@@ -92,124 +98,96 @@
     <main>
         <section class="products">
             <div class="container main-content d-flex justify-content-center align-content-center">
-                <h2 class="productsslogan"><span style="color:orange">CREATIVE INNOVATION</span></h2>
+                <h2 class="productsslogan"><span style="color:orange">WARRANTY</span></h2>
             </div>
         </section>
-    </main>
-    <!--  End of hero section  -->
+    </main><br>
+    <!---(content)-->
 
-    <!--Contact Starts Here-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-
-                <div class="container" style="color: white; background-color: gray;">
-                    <form action="" method="post">
-                        <div class="container-fluid">
-                            <h2 class="display-6">Contact</h2>
-                            <p>For general inquiries, including questions about online orders, please complete and
-                                submit the form below. Please be sure to include your order number if applicable.</p>
-                        </div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-4">
-                                    <label for="firstname" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" placeholder="First name" required>
-                                    <div class="valid-feedback">Valid</div>
-                                    <div class="invalid-feedback">Please fill out this field</div>
-                                </div>
-                                <div class="col-4">
-                                    <label for="formLastname" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Last name" required>
-                                    <div class="valid-feedback">Valid</div>
-                                    <div class="invalid-feedback">Please fill out this field</div>
-                                </div>
-                                <div class="col-2">
-                                    <label for="formMiddlename" class="form-label">M.I.</label>
-                                    <input type="text" class="form-control" placeholder="Middle Initial">
-                                </div>
-                                <div class="col-2">
-                                    <label for="formMiddlename" class="form-label">Suffix</label>
-                                    <input type="text" class="form-control" placeholder="Suffix" aria-label="Suffix">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="inputEmail4" class="form-label">Email</label>
-                                    <input type="email" class="form-control"
-                                        placeholder="Enter your valid email address" id="inputEmail4" required>
-                                    <div class="valid-feedback">Valid</div>
-                                    <div class="invalid-feedback">Please fill out this field</div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputNumber" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" placeholder="Phone Number" id="inputEmail4"
-                                        required>
-                                    <div class="valid-feedback">Valid</div>
-                                    <div class="invalid-feedback">Please fill out this field</div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container-fluid">
-                            <div class="col-md-6">
-                                <label for="text" class="form-label">Order Number (If applicable)</label>
-                                <input type="text" class="form-control" placeholder="Oder Number" id="order number">
-                                <br>
-                                <label for="text" class="form-label">Subject</label>
-                                <input type="text" class="form-control" placeholder="Subject" id="subject">
-                                <br>
-                            </div>
-                            <div class="message">
-                                <h6>
-                                    Message Here
-                                </h6>
-                                <textarea placeholder="message here"></textarea>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container-fluid">
-                            <div class="button-container">
-                                <div class="row">
-                                    <div class="col-4">
-                                    </div>
-                                    <div class="col-4" ids="submit">
-                                        <button type="submit">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!--Warranty Starts Here-->
+    <div class="container" style="color: white; background-color: gray;">
+        <form>
+            <div class="container-fluid">
+                <h2 class="display-6">Contact</h2>
+                <p>For general inquiries, including questions about online orders, please complete and
+                    submit the form below. Please be sure to include your order number if applicable.</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First name" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="col-4">
+                        <label for="formLastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="col-2">
+                        <label for="formMiddlename" class="form-label">M.I.</label>
+                        <input type="text" class="form-control" placeholder="Middle Initial">
+                    </div>
+                    <div class="col-2">
+                        <label for="formMiddlename" class="form-label">Suffix</label>
+                        <input type="text" class="form-control" placeholder="Suffix" aria-label="Suffix">
+                    </div>
                 </div>
             </div>
-
-            <!--Contact Ends Here-->
-            <!--Contact Starts Here-->
-            <div class="col-6">
-                <div class="container" style="color: white; background-color: blueviolet;">
-                    <form action="" method="post">
-                        <div class="container-fluid">
-                            <h2 class="display-6">Warranty Form</h2>
-                            <p>For general inquiries, including questions about online orders, please complete and
-                                submit the form below. Please be sure to include your order number if applicable.</p>
+            <br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control"
+                            placeholder="Enter your valid email address" id="inputEmail4" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputNumber" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Phone Number" id="inputEmail4"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <div class="col-md-6">
+                    <label for="text" class="form-label">Order Number (If applicable)</label>
+                    <input type="text" class="form-control" placeholder="Oder Number" id="order number">
+                    <br>
+                    <label for="text" class="form-label">Subject</label>
+                    <input type="text" class="form-control" placeholder="Subject" id="subject">
+                    <br>
+                </div>
+                <div class="message">
+                    <h6>
+                        Message Here
+                    </h6>
+                    <textarea placeholder="message here"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <div class="button-container">
+                    <div class="row">
+                        <div class="col-4">
                         </div>
-
-
-                        <div class="button-container">
-
+                        <div class="col-4" ids="submit">
                             <button type="submit">Submit</button>
-        
                         </div>
+                    </div>
                 </div>
-           
             </div>
-        </div>
+        </form>
     </div>
-    </div>
+    <!--Warranty ends Here-->
 
-    <!--Contact Ends Here-->
 
     <!-- Components Product section   -->
     <!--<section>
@@ -232,109 +210,135 @@
     <!--  End of Components Product section  -->
 
 
- <!--  Footer   -->
-<section>
-    <div class="container-fluid">
-        <div class="row footer text-left">
-            <div class="col-md-6" style="padding-top: 20px;">
-                <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
-                            height="50px"></a></h2>
-                <p>If you are interested to resell KLT products, please complete the Wholesale
-                    Application Form and our team member will contact you.
+    <!--  Footer   -->
+    <section>
+        <div class="container-fluid">
+            <div class="row footer text-left">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
+                                height="50px"></a></h2>
+                    <p>If you are interested to resell KLT products, please complete the Wholesale
+                        Application Form and our team member will contact you.
 
-                    <br>If you have any questions please contact us at
-                    <br><u><b>info@klt.com</b></u>
-                    <br>Address:
-                    <br>Philippines
-                </p>
+                        <br><br>If you have any questions please contact us at
+                        <br><u><b>info@klt.com</b></u>
 
-                
+                        <br><br>Address:
+                        <br>Philippines
+                    </p>
 
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Customer Service</b></u></h4>
-                <ul class="footer">
+                    <div class="col-3">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                    </div>
 
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Terms of Service</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Return Policy</a>
-                    </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#">Wholesale Application</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3" style="padding-top: 20px;">
-                <h4><u><b>Follow Us</b></u></h4>
-                <div class="col-3 social">
-                    <a href="https://www.facebook.com/"><span><i class="fa-brands fa-facebook"></i></span></a>
-                    <br>
-                    <a href="https://www.instagram.com/"><span><i class="fa-brands fa-instagram"></i></span></a>
-                    <br>
-                    <a href="https://twitter.com/"><span><i class="fa-brands fa-twitter"></i></span></a>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <h4><u><b>Customer Service</b></u></h4>
+                    <ul class="footer">
+
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Return Policy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Wholesale Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="padding-top: 20px;">
+                    <h4><u><b>Newsletter</b></u></h4>
+                    <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                        more.</p>
+                    <form class="d-flex">
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--  End of Footer -->
+    </section>
+    <!--  End of Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="owl_carousel/owl.carousel.js"></script>
-    <script>
-        let myNav = document.getElementById('navbar-scrolled');
-        window.onscroll = function () {
-            if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
-                myNav.classList.add("nav-colored");
-                myNav.classList.remove("nav-transparent");
-            }
-            else {
-                myNav.classList.add("nav-transparent");
-                myNav.classList.remove("nav-colored");
-            }
-        };
 
-    </script>
 
     <!--  Add to cart Starts Here-->
-    <script>
-        const product = [];
-        const categories = [...new Set(product.map((item) => { return item }))]
-        let i = 0;
-        /* document.getElementById('root').innerHTML = categories.map((item)=>
-         {
-             var {image, title, price} = item;
-             return(
-                 `<div class='box'>
-                     <div class='img-box'>
-                         <img class='images' src=${image}></img>
-                     </div>
-                     <div class='bottom'>
-                         <p>${title}</p>
-                         <h2>₱ ${price}.00</h2>`+ 
-                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-                     `</div>
-                 </div>`       
-             )
-         })
-         .join('')
-         */
-        console.log(categories)
-        var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
-        console.log(cart)
-        displaycart()
-        function addtocart(a) {
+    <script src="./data/products.js"></script>
+    <script src="dashboard.js"></script>
 
-            console.log(a)
-            cart.push({ ...categories[a] });
+
+    <script>
+        console.log(productData)
+
+        //const categories = [...new Set(product.map((item)=>
+        //    {return item}))]
+        function displayProduct( ) {
+            if (productData) {
+                let i = 0;
+                document.getElementById('root').innerHTML = productData.map((item) => {
+                    var { image, title, price, image_main, name, _id } = item;
+                    return (
+                        `<div class='box'>
+                            <div class='img-box'>
+                                <img class='images' src=${image}></img>
+                            </div>
+                            <div class='bottom'>
+                                <p class='product-title'>${name}</p>
+                                <h2>₱ ${price}.00</h2>
+                                
+                                <button onclick='addtocart("${_id.$oid}")'>Add to cart</button>
+                            </div>
+                        </div>`
+                    )
+                })
+                    .join('')
+            }
+   
+           
+        }
+
+        displayProduct()
+
+
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        displaycart()
+        function addtocart(id) {
+            if (!userData) {
+                alert("You must logged in to add cart. will be redirected to login page")
+                location.href = "LoginForm.html"
+                return false
+            }
+            /* TOASTER NOTIF OF ADDING CART */
+       
+            Toastify({
+                text: "Product Added to Cart",
+                className: "info",
+                position: "center",
+                style: {
+                    background: "black",
+                }
+            }).showToast();
+            /* ------------------------ */
+            const findProduct = productData.find(item => item._id.$oid === id)
+            console.log(findProduct)
+            if (cart.length !== 0) {
+                console.log("this")
+                cart = [...cart, { ...findProduct }]
+
+            } else {
+                cart = [{ ...findProduct }]
+            }
             localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
 
@@ -376,11 +380,17 @@
     </script>
 
     <!--  Add to cart Ends Here-->
+    
+        <!-- CDN FOR FOOTER  -->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="emailJS.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
+
 </body>
 
 </html>

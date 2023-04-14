@@ -157,8 +157,7 @@
         <div class="container-fluid">
             <div class="row footer text-left">
                 <div class="col-md-5" style="padding-top: 20px;">
-                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px"
-                                height="50px"></a></h2>
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
                     <p>If you are interested to resell KLT products, please complete the Wholesale
                         Application Form and our team member will contact you.
 
@@ -199,8 +198,8 @@
                     <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
                         more.</p>
                     <form class="d-flex">
-                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email">
-                        <button class="btnfooter me-2 px-3" type="submit">Submit</button>
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email" id="emailInput">
+                        <button class="btnfooter me-2 px-3" type="submit" id="sendEmailHandler">Submit</button>
                     </form>
                 </div>
             </div>
@@ -213,28 +212,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="owl_carousel/owl.carousel.js"></script>
-    <script src="dashboard.js"></script>
 
 
     <!--  Add to cart Starts Here-->
     <script src="./data/products.js"></script>
+    <script src="dashboard.js"></script>
+
 
     <script>
         console.log(productData)
 
-        const searchData = JSON.parse(localStorage.getItem("searchData"))
-        console.log(searchData)
         //const categories = [...new Set(product.map((item)=>
         //    {return item}))]
-        function displayProduct() {
-            if (searchData.length === 0) {
-                document.getElementById('root').innerHTML = "<h3>No item found</h3>"
-                return false
-            }
-
-            if (searchData) {
+        function displayProduct( ) {
+            if (productData) {
                 let i = 0;
-                document.getElementById('root').innerHTML = searchData.map((item) => {
+                document.getElementById('root').innerHTML = productData.map((item) => {
                     var { image, title, price, image_main, name, _id } = item;
                     return (
                         `<div class='box'>
@@ -251,9 +244,9 @@
                     )
                 })
                     .join('')
-                return false
             }
-
+   
+           
         }
 
         displayProduct()
@@ -268,7 +261,7 @@
                 return false
             }
             /* TOASTER NOTIF OF ADDING CART */
-
+       
             Toastify({
                 text: "Product Added to Cart",
                 className: "info",
@@ -329,12 +322,6 @@
 
     <!--  Add to cart Ends Here-->
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 
 </body>
 
