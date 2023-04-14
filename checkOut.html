@@ -1,120 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="images/x-icon" href="images/favicon-removebg-preview.png" sizes="180x180" type="img/jpg">
-    <title>Cloud Chamber</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylehome.css">
+    <!-- Favicon CSS -->
+    <link rel="shortcut icon" href="./images/KLT-modified.png" type="image/x-icon">
+    <!-- icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
+    <!-- Js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
+
 </head>
 
-<body>
+<body> 
 
-    <header class="navbar navbar-expand-xxl bd-navbar sticky-top">
-        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
-        </nav>
-    </header>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-    <!------------------------alert ---------------------------->
-
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <div>
-            <b> WARNING</b>: This product contains <b>NICOTINE</b>. Nicotine is an addictive chemical.
-        </div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-    <!-----------------------end of alert-------------------------->
 
-    <!----------------this is for navbar Favicon-------------------->
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104583995946499");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/favicon-removebg-preview.png" alt="cloud chamber" width="100" height="100">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!------------------end navbar Favicon--------------------------->
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
 
-        <!------------------Navbar start here--------------------------->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><span class="text-light">Home </span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class=" text text-light">VAPE JUICE</span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="All.html">ALL</a>
-                        <a class="dropdown-item" href="Bestseller.html">Best Seller</a>
-                        <a class="dropdown-item" href="Mentholated.html">Mentholated</a>
-                        <a class="dropdown-item" href="Fruity.html">Fruity</a>
-                        <a class="dropdown-item" href="pastryone.html" target="_blank">Pastry</a>
-                        <a class="dropdown-item" href="Freebase.html">Freebase Nicotine</a>
-                        <a class="dropdown-item" href="saltnic.html">Saltnic Nicotine</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="PODS.html"><span class="text-light">PODS </span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="MOD.html"><span class="text-light">MODS</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="accoseries.html"><span class="text-light">ACCESORIES</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="WISHLIST.html"><span class="text-light">WISHLIST</span></a>
-                </li>
-            </ul>
-            <!-------------------Seach bar cart and account-------------------------->
-            <div class="col-md-4 p-3"></div>
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light  my-2 my-sm-0" type="submit"><span
-                    class="text-light"></span>Search</span></button>
-            <div class="icon p-2">
-                <a href="cart.html"> <img src="images/cart-removebg-preview.png" alt="cart" width="40" height="40"></a>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
+        <div class="container-fluid container-nav">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>                
+                    <li class="nav-item">
+                        <a class="nav-link" href="bundles.html">Bundles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Warranty</a>
+                    </li>
+
+                    
+
+
+                </ul>
+                <form class="d-flex navinput">
+                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
+                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
+                    <p id="count">0</p>
+
+                    <li class="nav-item dropdown-center" style="margin-top: -22px;">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropstart">
+                            <li id="usernameDashboard"></li>
+                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
+                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
+                            <li id="isUserLogout" class="user_logout"></li>
+                        </li>
+                        </ul>
+                    </li>
+
+                </form>
             </div>
-            <div class="icon1 p-3">
-                <a href="account.html"> <img src="images/Pfp-removebg-preview.png" alt="account" width="40"
-                        height="40"></a>
-            </div>
-        </div>
         </div>
     </nav>
-<!-------------------------------------end of navbar------------------------------------>
+    <!-- End of navbar   -->
 
-    <div class="container py-5">
-        <!-- For demo purpose -->
-        <div class="row mb-4">
-            <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-6"> Payment Forms</h1>
-            </div>
-        </div> 
+        <!-- hero section  -->
+        <main>
+            <section class="products">
+                <div class="container main-content d-flex justify-content-center align-content-center">
+                    <h2 class="productsslogan"><span style="color:orange">PAYMENT FORM</span></h2>
+                </div>
+            </section>
+        </main>
+        <!--  End of hero section  -->
+        
         <!-- End -->
-        <div class="row">
+        <div class="row" style="margin-top: 50px;">
             <div class="col-lg-6 mx-auto">
                 <div class="card ">
                     <div class="card-header">
                         <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
 
                             <!-- Credit card form tabs -->
-                            <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                            <ul role="tablist" class="nav bg-secondary nav-pills rounded nav-fill mb-3">
                                 <li class="nav-item"> <a data-toggle="pill" href="#credit-card"
-                                        class="nav-link active "> <i class="fas fa-credit-card mr-2"></i> Credit Card
+                                        class="nav-link" style="background-color: black;"> <i class="fas fa-credit-card mr-2"></i> Credit Card
                                     </a> </li>
                                 <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i
                                             class="fab fa-paypal mr-2"></i> Paypal </a> </li>
@@ -163,7 +190,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer"> <button type="button"
-                                            class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment
+                                            class="subscribe btn btn-secondary btn-block shadow-sm"> Confirm Payment
                                         </button>
                                 </form>
                             </div>
@@ -176,7 +203,7 @@
                             <div class="form-group "> <label class="radio-inline"> <input type="radio" name="optradio"
                                         checked> Domestic </label> <label class="radio-inline"> <input type="radio"
                                         name="optradio" class="ml-5">International </label></div>
-                            <p> <button type="button" class="btn btn-primary "><i class="fab fa-paypal mr-2"></i> Log
+                            <p> <button type="button" class="btn btn-secondary "><i class="fab fa-paypal mr-2"></i> Log
                                     into my Paypal</button> </p>
                             <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure
                                 gateway for payment. After completing the payment process, you will be redirected back
@@ -199,7 +226,7 @@
                                     <option>ADB</option>
                                 </select> </div>
                             <div class="form-group">
-                                <p> <button type="button" class="btn btn-primary "><i
+                                <p> <button type="button" class="btn btn-secondary "><i
                                             class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
                             </div>
                             <p class="text-muted">Note: After clicking on the button, you will be directed to a secure
@@ -211,88 +238,171 @@
                 </div>
             </div>
         </div>
-        <!-------------------------------Footer------------------------------->
+        
+     <!--Contact Ends Here-->    
 
-        <footer class="text-center text-lg-start  text-muted">
-
-            <!-- Section: Links  -->
-            <section class="bg-light py-5">
-                <div class="container text-center text-md-start ">
-                    <div class="row mt-3">
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="footer-chamber text-uppercase fw-bold mb-4">
-                                Cloud Chamber
-                            </h6>
-                            <p>
-                                <a href="index.html" class="text-reset">Home</a>
-                            </p>
-                            <p>
-                                <a href="account.html" class="text-reset">Account</a>
-                            </p>
-                            <p>
-                                <a href="cart.html" class="text-reset">Cart</a>
-                            </p>
-                            <p>
-                                <a href="about.html" class="text-reset">About</a>
-                            </p>
-                        </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                FLAVORS
-                            </h6>
-                            <p>
-                                <a href="Mentholated.html" class="text-reset">Mentholated</a>
-                            </p>
-                            <p>
-                                <a href="Fruity.html" class="text-reset">Fruity</a>
-                            </p>
-                            <p>
-                                <a href="Pastry.html" class="text-reset">Pastry</a>
-                            </p>
-                            <p>
-                                <a href="Freebase.html" class="text-reset">Freebase Nicotine</a>
-                            </p>
-                            <p>
-                                <a href="saltnic.html" class="text-reset">Saltnic Nicotine</a>
-                            </p>
-                        </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                Useful links
-                            </h6>
-                            <p>
-                                <a href="https://www.facebook.com/cloudchamber2021/" class="text-reset">Facebook</a>
-                            </p>
-                            <p>
-                                <a href="https://shopee.ph/lejasdurangegie" class="text-reset">Shopee</a>
-                            </p>
-                            <p>
-                                <a href="https://www.lazada.com.ph/shop/pinkwhite-ejuiceph?path=index.htm&lang=en&pageTypeId=1"
-                                    class="text-reset">Lazada</a>
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i class="fas fa-home me-3"></i> Marikina City</p>
-                            <p>
-                                <i class="fas fa-envelope me-3"></i>
-                                ggdd06112008@gmail.com
-                            </p>
-                            <p><i class="fas fa-phone me-3"></i> + 639-2718-87671</p>
-                            <p><i class="fas fa-print me-3"></i> + 639-0544-53805</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
-                <a class="text-reset fw-bold" href="#">Cloud Chamber</a>
+    <!-- Components Product section   -->
+    <!--<section>
+        <div class="container">
+            <div id="root">
             </div>
-            <!-- Copyright -->
-        </footer>
-        <!---------------end Footer------------------------->
+            <div class="sidebar">
+                <div class="head"><p>My cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">P 0.00</h2>
+                </div>
+            </div>
 
+        </div>
+
+    </section>-->
+
+<!--  End of Components Product section  -->
+
+
+    <!--  Footer   -->
+    <section>
+        <div class="container-fluid" style="margin-top: 50px;">
+            <div class="row footer text-left">
+                <div class="col-md-5" style="padding-top: 20px;">
+                    <h2><a class="footerimg" href="#"><img src="./images/KLT-modified.png" width="100px" height="50px"></a></h2>
+                    <p>If you are interested to resell KLT products, please complete the Wholesale
+                        Application Form and our team member will contact you.
+
+                        <br><br>If you have any questions please contact us at
+                        <br><u><b>info@klt.com</b></u>
+
+                        <br><br>Address:
+                        <br>Philippines
+                    </p>
+
+                    <div class="col-3">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                    </div>
+
+                </div>
+                <div class="col-md-4" style="padding-top: 20px;">
+                    <h4><u><b>Customer Service</b></u></h4>
+                    <ul class="footer">
+
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Terms of Service</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Return Policy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-link" href="#">Wholesale Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="padding-top: 20px;">
+                    <h4><u><b>Newsletter</b></u></h4>
+                    <p>Sign up to get 10% off your first order and gain access to insider discounts, tips, and much
+                        more.</p>
+                    <form class="d-flex">
+                        <input class="px-2 footersubmit" type="email" placeholder="Email" aria-label="Email">
+                        <button class="btnfooter me-2 px-3" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  End of Footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="owl_carousel/owl.carousel.js"></script>
+
+
+    <!--  Add to cart Starts Here-->
+    <script>
+        const product = [];
+        const categories = [...new Set(product.map((item)=>
+            {return item}))]
+            let i=0;
+       /* document.getElementById('root').innerHTML = categories.map((item)=>
+        {
+            var {image, title, price} = item;
+            return(
+                `<div class='box'>
+                    <div class='img-box'>
+                        <img class='images' src=${image}></img>
+                    </div>
+                    <div class='bottom'>
+                        <p>${title}</p>
+                        <h2>₱ ${price}.00</h2>`+ 
+                        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+                    `</div>
+                </div>`       
+            )
+        })
+        .join('')
+        */
+        console.log(categories)
+        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
+        console.log(cart)
+        displaycart()
+        function addtocart(a){
+            
+            console.log(a)
+            cart.push({...categories[a]});
+            localStorage.setItem("cartItems",JSON.stringify(cart))
+            displaycart();
+      
+        }
+        function delElement(a){
+            cart.splice(a, 1);
+            localStorage.setItem("cartItems",JSON.stringify(cart))
+            displaycart();
+
+
+
+        }
+
+        function displaycart(a){
+            let j = 0, total=0;
+            document.getElementById("count").innerHTML=cart.length;
+            if(cart.length==0){
+                document.getElementById('cartItem').innerHTML = "Your cart is empty";
+                document.getElementById("total").innerHTML = "₱ "+0+".00";
+            }
+            else{
+                document.getElementById('cartItem').innerHTML = cart.map((items)=>
+                {
+                    var {image, title, price} = items;
+                    total=total+price;
+                    document.getElementById("total").innerHTML = "₱ "+total+".00";
+                    return(
+                        `<div class='cart-item'>
+                            <div class=row-img'>
+                                <img class='rowimg' src=${image}>
+                            </div>
+                                <p style='font-size:12px;'>${title}</p>
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
+                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                    )
+                }).join('');
+            }
+        }
+
+    </script>
+
+    <!--  Add to cart Ends Here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script src="dashboard.js"></script>
 </body>
 
 </html>
