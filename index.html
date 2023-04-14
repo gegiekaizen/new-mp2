@@ -27,9 +27,9 @@
 
 </head>
 
-<body> 
+<body>
 
-    <!-- Messenger Chat Plugin Code -->
+   <!-----> Messenger Chat Plugin Code
     <div id="fb-root"></div>
 
     <!-- Your Chat Plugin code -->
@@ -37,29 +37,28 @@
     </div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "104583995946499");
-      chatbox.setAttribute("attribution", "biz_inbox");
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "104583995946499");
+        chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v16.0'
-        });
-      };
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v16.0'
+            });
+        };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script> 
 
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-secondary pb-3  fixed-top" id="navbar-scrolled">
@@ -79,7 +78,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Product</a>
-                    </li>                
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
@@ -90,7 +89,7 @@
                         <a class="nav-link" href="warranty.html">Warranty</a>
                     </li>
 
-                    
+
 
 
                 </ul>
@@ -102,17 +101,18 @@
 
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-person-circle"></i>
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li id="usernameDashboard"></li>
-                            <li  class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
-                            <li  class="removeLogin" id="isUserLogin"><a  href="LoginForm.html">Login</a></li>
+                            <li class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a>
+                            </li>
+                            <li class="removeLogin" id="isUserLogin"><a href="LoginForm.html">Login</a></li>
                             <li id="isUserLogout" class="user_logout"></li>
-                        </li>
-                        </ul>
+                    </li>
+                    </ul>
                     </li>
 
                 </form>
@@ -137,7 +137,8 @@
         <div class="container" id="">
             <div class="row align-items-center">
                 <div class="col-md-12 col-sm-12 text-center">
-                    <h2 class="display-4 mb-4" style="color: black; margin-top: 80px;"><b>Computer Parts and Accessories</b></h2>
+                    <h2 class="display-4 mb-4" style="color: black; margin-top: 80px;"><b>Computer Parts and
+                            Accessories</b></h2>
                 </div>
             </div>
         </div>
@@ -149,14 +150,25 @@
                 </div>
                 <div class="col-md-6 col-sm-12 text-center text-md-left py-5">
                     <h3 class="display-4 mb-4" style="color: black;"><b>Custom Desktops and Work Stattions</b></h3>
-                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you are looking for a custom built CBS PC, business workstation or a refurbished desktop.  We can find the right system to suit any of your home, business or gaming needs.
-                        Choose from our selection of top name brand PC's, or have us build a custom computer to match your specific needs.
-                        Whether you are looking to purchase a basic low end desktop for internet use, document processing, and email. Or are looking for a professional desktop PC workstation for your business or even a top of the line Gaming machine, we have it all.
-                        All of the Desktops feature top of the line brand quality parts and we sell and service all makes and models.
-                        Our desktops also come with optional extended warranties when you make your purchase and we have a wide variety of accessories in stock as well.
-                        The size and relatively low cost of desktop computers make computer applications and Internet access available to home and small business users ewverywhere.
-                        Compared to laptop computers, larger desktop machines allow users to more easily upgrade the devices with larger, less-expensive components.
-                        When assembling our Custom PC series computers. We use only the top brand manufacturers and assure quality parts for every computer. We guarantee a long lasting quality computer for your home or office.
+                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you are looking for a custom
+                        built CBS PC, business workstation or a refurbished desktop. We can find the right system to
+                        suit any of your home, business or gaming needs.
+                        Choose from our selection of top name brand PC's, or have us build a custom computer to match
+                        your specific needs.
+                        Whether you are looking to purchase a basic low end desktop for internet use, document
+                        processing, and email. Or are looking for a professional desktop PC workstation for your
+                        business or even a top of the line Gaming machine, we have it all.
+                        All of the Desktops feature top of the line brand quality parts and we sell and service all
+                        makes and models.
+                        Our desktops also come with optional extended warranties when you make your purchase and we have
+                        a wide variety of accessories in stock as well.
+                        The size and relatively low cost of desktop computers make computer applications and Internet
+                        access available to home and small business users ewverywhere.
+                        Compared to laptop computers, larger desktop machines allow users to more easily upgrade the
+                        devices with larger, less-expensive components.
+                        When assembling our Custom PC series computers. We use only the top brand manufacturers and
+                        assure quality parts for every computer. We guarantee a long lasting quality computer for your
+                        home or office.
                     </p>
                 </div>
             </div>
@@ -168,7 +180,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-sm-12 text-center text-md-right py-5">
                     <h3 class="display-4 mb-4" style="color: black;"><b>We also build Custom Gaming PC's</b></h3>
-                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you have a specific list of parts or requirements for a machine, or need to something that will do a specific task, we can help set you up with what you need.
+                    <p class="about mb-3 px-3 mx-3" style="text-align: justify;">Whether you have a specific list of
+                        parts or requirements for a machine, or need to something that will do a specific task, we can
+                        help set you up with what you need.
                         Come in and talk to one of our computer experts. They will help you in realizing your goals.
                     </p>
                 </div>
@@ -206,7 +220,7 @@
                     </div>
                     <div class="product-info p-3">
                         <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">COMPONENTS</a>
-                        
+
                     </div>
                 </div>
 
@@ -225,12 +239,13 @@
 
                     <div class="product-info p-3">
                         <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">PERIPHERALS</a>
-                        
+
                     </div>
                 </div>
                 <div class="col product-item mx-auto">
                     <div class="product-img">
-                        <img src="./images/pngtree-cartoon-gaming-accessories-accessory-professional-png-image_4688166.png" alt="image" class="img-fluid d-block mx-auto">
+                        <img src="./images/pngtree-cartoon-gaming-accessories-accessory-professional-png-image_4688166.png"
+                            alt="image" class="img-fluid d-block mx-auto">
                         <span class="heart-icon">
                             <i class="far fa-heart"></i>
                         </span>
@@ -243,9 +258,9 @@
 
                     <div class="product-info p-3">
                         <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">ACCESSORIES</a>
-                        
+
                     </div>
-                </div>                
+                </div>
                 <div class="col product-item mx-auto">
                     <div class="product-img">
                         <img src="./images/os and software.png" alt="image" class="img-fluid d-block mx-auto">
@@ -261,7 +276,7 @@
 
                     <div class="product-info p-3">
                         <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">OS & SOFTWARES</a>
-                        
+
                     </div>
                 </div>
                 <div class="col product-item mx-auto">
@@ -279,10 +294,10 @@
 
                     <div class="product-info p-3">
                         <a href="#" class="d-block text-dark text-decoration-none py-2 product-name">LAPTOP DEVICES</a>
-                        
+
                     </div>
                 </div>
-                               
+
             </div>
         </div>
         <!-- End of carousel section   -->
@@ -292,13 +307,13 @@
     </section>
     <!--  End of Product section  -->
     <hr>
-     <!--  About us   -->
+    <!--  About us   -->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </section>
     <!--  End of About us  -->
 
@@ -361,9 +376,8 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--  End of Footer -->
+    </section>
+    <!--  End of Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -394,7 +408,6 @@
         })
     </script>
 
-
     <script src="owlcarousel/owl.carousel.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -405,69 +418,67 @@
     <!--  Add to cart Starts Here-->
     <script>
         const product = [];
-        const categories = [...new Set(product.map((item)=>
-            {return item}))]
-            let i=0;
-       /* document.getElementById('root').innerHTML = categories.map((item)=>
-        {
-            var {image, title, price} = item;
-            return(
-                `<div class='box'>
-                    <div class='img-box'>
-                        <img class='images' src=${image}></img>
-                    </div>
-                    <div class='bottom'>
-                        <p>${title}</p>
-                        <h2>₱ ${price}.00</h2>`+ 
-                        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-                    `</div>
-                </div>`       
-            )
-        })
-        .join('')
-        */
+        const categories = [...new Set(product.map((item) => { return item }))]
+        let i = 0;
+        /* document.getElementById('root').innerHTML = categories.map((item)=>
+         {
+             var {image, title, price} = item;
+             return(
+                 `<div class='box'>
+                     <div class='img-box'>
+                         <img class='images' src=${image}></img>
+                     </div>
+                     <div class='bottom'>
+                         <p>${title}</p>
+                         <h2>₱ ${price}.00</h2>`+ 
+                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+                     `</div>
+                 </div>`       
+             )
+         })
+         .join('')
+         */
         console.log(categories)
-        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
+        var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
         console.log(cart)
         displaycart()
-        function addtocart(a){
-            
+        function addtocart(a) {
+
             console.log(a)
-            cart.push({...categories[a]});
-            localStorage.setItem("cartItems",JSON.stringify(cart))
+            cart.push({ ...categories[a] });
+            localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
-      
+
         }
-        function delElement(a){
+        function delElement(a) {
             cart.splice(a, 1);
-            localStorage.setItem("cartItems",JSON.stringify(cart))
+            localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
 
 
 
         }
 
-        function displaycart(a){
-            let j = 0, total=0;
-            document.getElementById("count").innerHTML=cart.length;
-            if(cart.length==0){
+        function displaycart(a) {
+            let j = 0, total = 0;
+            document.getElementById("count").innerHTML = cart.length;
+            if (cart.length == 0) {
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₱ "+0+".00";
+                document.getElementById("total").innerHTML = "₱ " + 0 + ".00";
             }
-            else{
-                document.getElementById('cartItem').innerHTML = cart.map((items)=>
-                {
-                    var {image, title, price} = items;
-                    total=total+price;
-                    document.getElementById("total").innerHTML = "₱ "+total+".00";
-                    return(
+            else {
+                document.getElementById('cartItem').innerHTML = cart.map((items) => {
+                    var { image, title, price } = items;
+                    total = total + price;
+                    document.getElementById("total").innerHTML = "₱ " + total + ".00";
+                    return (
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
-                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>` +
+                        "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
                     )
                 }).join('');
             }
@@ -479,6 +490,20 @@
     <!--  Add to cart Ends Here-->
 
     <script src="dashboard.js"></script>
+
+    <!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6437f9434247f20fefeb6cc2/1gttabca6';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script> -->
+    <!--End of Tawk.to Script-->
 </body>
-    
+
 </html>
