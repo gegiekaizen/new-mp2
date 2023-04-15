@@ -1,4 +1,4 @@
-// usernameDashboard
+// usernameDashboard //
       const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
       const navLogOut = document.querySelector(".dropstart");
@@ -73,9 +73,9 @@
       });
 
       usernameDashboard.innerHTML = `${userData.firstName}`;
-      navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
-                        ><span class="hover-underline-animation">Logout</span></a
-                      >`;
+      // navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
+      //                   ><span class="hover-underline-animation">Logout</span></a
+      //                 >`;
       removeLogin.innerHTML = "";
       removeRegister.innerHTML = "";
 

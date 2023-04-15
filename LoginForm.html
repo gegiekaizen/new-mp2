@@ -133,9 +133,9 @@
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const admin = document.getElementById("admin_log")
-// const user = JSON.parse(localStorage.getItem("userInfo"));
+const user = JSON.parse(localStorage.getItem("userInfo"));
 
-console.log(userData)
+// console.log(userData);
 loginHandler.addEventListener("click", (e) => {
 	e.preventDefault();
 
@@ -155,7 +155,7 @@ loginHandler.addEventListener("click", (e) => {
 					return data;
 				}
 			});
-			// console.log(newData);
+			console.log(newData);
 			localStorage.setItem("userInfo", JSON.stringify(newData));
 			console.log("login Success");
             

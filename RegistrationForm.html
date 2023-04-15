@@ -35,7 +35,7 @@
 
 <body>
 
-      <!--Navigation Start Here-->
+      Navigation Start Here
       <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -171,7 +171,7 @@
                 </form>
             </div>
         </div>
-    </nav> -->
+    </nav>  -->
 
     <!-- End of navbar   -->
 
@@ -228,7 +228,7 @@ signupHandler.addEventListener("click", (e) => {
 	e.preventDefault();
 
 	let newUserInfo = [];
-	// console.log(firstName.value.length);
+	console.log(firstName.value.length);
 	const validationResult = InputValidation();
 
 	if (validationResult === false) {
@@ -236,28 +236,28 @@ signupHandler.addEventListener("click", (e) => {
 	}
 
   
-    	const userInfo = {
-		firstName: firstName.value,
-		lastName: lastName.value,
-		email: email.value,
-		phoneNumber: phoneNumber.value,
-		userPassword: userPassword.value,
-		isLoggedIn: false,
-        userLevel: "user"
-	};
-    
-
-
-    
-    //     const userInfo = {
+    // 	const userInfo = {
 	// 	firstName: firstName.value,
 	// 	lastName: lastName.value,
 	// 	email: email.value,
 	// 	phoneNumber: phoneNumber.value,
 	// 	userPassword: userPassword.value,
 	// 	isLoggedIn: false,
-    //     userLevel: "admin"
+    //     userLevel: "user"
 	// };
+    
+
+
+    
+        const userInfo = {
+		firstName: firstName.value,
+		lastName: lastName.value,
+		email: email.value,
+		phoneNumber: phoneNumber.value,
+		userPassword: userPassword.value,
+		isLoggedIn: false,
+        userLevel: "admin"
+	};
 
    
 
