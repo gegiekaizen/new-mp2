@@ -73,9 +73,9 @@
       });
 
       usernameDashboard.innerHTML = `${userData.firstName}`;
-      navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
+      navLogOut.innerHTML = !userData ? `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
-                      >`;
+                      >` : "";
       removeLogin.innerHTML = "";
       removeRegister.innerHTML = "";
 

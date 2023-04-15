@@ -180,6 +180,7 @@
                 </form>
             </div>
         </div>
+        
 </section>
 <!--  End of Footer -->
 
@@ -198,37 +199,9 @@
     <script>
         console.log(productData)
 
-        //const categories = [...new Set(product.map((item)=>
-        //    {return item}))]
-        function displayProduct( ) {
-            if (productData) {
-                let i = 0;
-                document.getElementById('root').innerHTML = productData.map((item) => {
-                    var { image, title, price, image_main, name, _id } = item;
-                    return (
-                        `<div class='box'>
-                            <div class='img-box'>
-                                <img class='images' src=${image}></img>
-                            </div>
-                            <div class='bottom'>
-                                <p class='product-title'>${name}</p>
-                                <h2>₱ ${price}.00</h2>
-                                
-                                <button onclick='addtocart("${_id.$oid}")'>Add to cart</button>
-                            </div>
-                        </div>`
-                    )
-                })
-                    .join('')
-            }
-   
-           
-        }
-
-        displayProduct()
-
-
         let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        console.log(cart)
+
         displaycart()
         
         function addtocart(a){
@@ -247,7 +220,6 @@
 
 
         }
-
         function displaycart(a) {
             let j = 0, total = 0;
             document.getElementById("count").innerHTML = cart.length;
@@ -257,22 +229,24 @@
             }
             else {
                 document.getElementById('cartItem').innerHTML = cart.map((items) => {
-                    var { image, title, price } = items;
+                    var { image, title, price, name } = items;
                     total = total + price;
                     document.getElementById("total").innerHTML = "₱ " + total + ".00";
                     return (
                         `<div class='cart-item'>
-                            <div class=row-img'>
-                                <img class='rowimg' src=${image}>
+                            <div class='cart-header'>
+                                <div class=row-img'>
+                                    <img class='rowimg' src=${image}>
+                                </div>
+                                    <p style='font-size:12px;'>${name}</p>
                             </div>
-                                <p style='font-size:12px;'>${title}</p>
+                
                                 <h2 style='font-size: 15px;'>₱ ${price}.00</h2>` +
                         "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
                     )
                 }).join('');
             }
         }
-
     </script>
 
     <!--  Add to cart Ends Here-->
