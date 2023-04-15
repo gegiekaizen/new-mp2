@@ -244,24 +244,35 @@
         var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
         console.log(cart)
         displaycart()
-        function addtocart(a){
-
+        function addtocart(id) {
+            if (!userData) {
+                alert("You must logged in to add cart. will be redirected to login page")
+                location.href = "LoginForm.html"
+                return false
+            }
             /* TOASTER NOTIF OF ADDING CART */
+       
             Toastify({
                 text: "Product Added to Cart",
                 className: "info",
                 position: "center",
                 style: {
-                  background: "black",
+                    background: "black",
                 }
-              }).showToast();
+            }).showToast();
             /* ------------------------ */
-            
-            console.log(a)
-            cart.push({...categories[a]});
-            localStorage.setItem("cartItems",JSON.stringify(cart))
+            const findProduct = productData.find(item => item._id.$oid === id)
+            console.log(findProduct)
+            if (cart.length !== 0) {
+                console.log("this")
+                cart = [...cart, { ...findProduct }]
+
+            } else {
+                cart = [{ ...findProduct }]
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
-  
+
         }
         function delElement(a){
             cart.splice(a, 1);
@@ -299,6 +310,8 @@
         }
 
     </script>
+
+    
 
     <!--  Add to cart Ends Here-->
     <script src="./data/products.js"></script>
