@@ -20,23 +20,22 @@
     <!------------------------------Sidebar--------------------------->
     <div class="sidebar-container">
         <div class="sidebar">
-            <a class="admin" href="index.html"><img class="klogo" src="./images/KLT-modified.png" alt="Kaizen Loft Logo" width="90px" height="90px"></a>
+            <a class="admin" href="index.html"><img class="klogo" src="./images/KLT-modified.png" alt="Kaizen Loft Logo"
+                    width="90px" height="90px"></a>
             <a class="kaizen" href="index.html">ADMIN</a>
             <a href="toShip.html">To Ship</a>
             <a href="shipping.html"> Shipping</a>
             <a href="ShippingSettings.html">Shipping Settings</a>
             <a href="MyOrder.html">My Order</a>
             <a href="Cancellation.html">Cancellation</a>
-            <a href="Refund.html">Return/Refund</a>
+            <!-- <a href="Refund.html">Return/Refund</a> -->
             <a href="MyProduct.html">My Product</a>
             <a href="AddNewProduct.html">Add New Product</a>
-            <a href="productSetting.html">Product Settings</a>
-            <a href="Mybalance.html">My Balance</a>
             <a href="BankAccount.html">Bank Account</a>
-            <a href="PaymentSetting.html">Payment Settings</a>
+            <!-- <a href="PaymentSettings.html">Payment Settings</a> -->
             <a class="bus" href="businessinsight.html">Business Insight</a>
-            <a class="user" href="accountUser.html">Account</a>
-            <a class="logout" href="login.html">Logout</a>
+            <!-- <a class="user" href="accountUser.html">Account</a> -->
+            <a class="logout" id="isUserLogout">Logout</a>
         </div>
     </div>
     <!---------------------------End Of Sidebar------------------------------------------------------>
@@ -46,76 +45,65 @@
             <div class="container-product-categories">
                 <div class="row  d-flex  hover-effect gap-4 py-4">
                 
-                    <div class="card col-3" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/ASUS ROG Zephyrus Duo 16 (2022) Gaming Laptop.png" alt="Card image cap">
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" src="../../images/NUMBER1.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Laptop</h5>
+                            <h5 class="card-title">GRAPHICS</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="http://127.0.0.1:5503/graphic.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
 
-                    <div class="card col-3" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/peripherals.jpg" alt="Card image cap">
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" src="../../images/NUMBER2.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Accesories</h5>
+                            <h5 class="card-title">MOTHERBOARD</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="http://127.0.0.1:5503/motherboards.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
 
-                    <div class="card col-3" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/os and software.png" alt="Card image cap">
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" src="../../images/NUMBER3.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">OS & Software</h5>
+                            <h5 class="card-title">POWER SUPPLY</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="http://127.0.0.1:5503/power.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
 
-                    <div class="card col-4" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/nitro.jpg" alt="Card image cap">
+                    <div class="card col-4" style="width: 18rem;">
+                        <img class="card-img-top" src="../../images/NUMBER4.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Casing</h5>
+                            <h5 class="card-title">CPU</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="http://127.0.0.1:5503/processor.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
 
-                    <div class="card col-3" style="width: 20rem;">
+                    <div class="card col-3" style="width: 18rem;">
                         <img class="card-img-top" src="../../images/build.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Bundle</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="../../product.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
 
-                    <div class="card col-3" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/fan1.jpg" alt="Card image cap">
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" src="../../images/0JC-000D-00BN4-V01.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Chasis Fan</h5>
+                            <h5 class="card-title">MONITOR</h5>
                             <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
+                            <a href="http://127.0.0.1:5503/monitor.html" class="btn btn-success ">Edit</a><br><br>
+                            <a href="#" class="btn btn-secondary ">Delete</a>
                         </div>
                     </div>
-
-                    <div class="card col-3" style="width: 20rem;">
-                        <img class="card-img-top" src="../../images/corsair fan.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Corsair LL Series CO-9050072-WW LL120 RGB, 120mm Dual Light Loop RGB LED PWM Fan, 3 Fan Pack with Lighting Node PRO</h5>
-                            <div class="amount"></div><br>
-                            <a href="cotton.html" class="btn btn-success ">Edit</a><br><br>
-                            <a href="cart.html" class="btn btn-secondary ">Delete</a>
-                        </div>
-                    </div>
-
                
                 </div>
             </div>

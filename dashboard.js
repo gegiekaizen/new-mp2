@@ -1,4 +1,4 @@
-// usernameDashboard
+// usernameDashboard //
       const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
       const navLogOut = document.querySelector(".dropstart");
