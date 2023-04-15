@@ -199,39 +199,6 @@
     <script>
         console.log(productData)
 
-<<<<<<< HEAD
-=======
-        const categories = [...new Set(product.map((item)=>
-           {return item}))]
-        function displayProduct( ) {
-            if (productData) {
-                let i = 0;
-                document.getElementById('root').innerHTML = productData.map((item) => {
-                    var { image, title, price, image_main, name, _id } = item;
-                    return (
-                        `<div class='box'>
-                            <div class='img-box'>
-                                <img class='images' src=${image}></img>
-                            </div>
-                            <div class='bottom'>
-                                <p class='product-title'>${name}</p>
-                                <h2>₱ ${price}.00</h2>
-                                
-                                <button onclick='addtocart("${_id.$oid}")'>Add to cart</button>
-                            </div>
-                        </div>`
-                    )
-                })
-                    .join('')
-            }
-   
-           
-        }
-
-        displayProduct()
-
-
->>>>>>> 6a67ef47a1d4ba95df26a474617aa03ed5d3e333
         let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
         console.log(cart)
 
