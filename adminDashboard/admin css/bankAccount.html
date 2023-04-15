@@ -98,6 +98,38 @@
     <script src="miniproject.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
 
+    <script src="datatable.min.js"></script>
+    <script src="miniproject.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+    <script>
+        const user = JSON.parse(localStorage.getItem("userInfo"));
+
+        const isUserLogout = document.getElementById("isUserLogout")
+
+        
+      let userData = user.find((data) => {
+        return data.isLoggedIn === true;
+      });
+
+        isUserLogout.addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("logout")
+            let newData = user.map((data) => {
+              if (data.isLoggedIn === true) {
+                return { ...userData, isLoggedIn: false };
+              } else {
+                return data;
+              }
+            });
+    
+            localStorage.setItem("userInfo", JSON.stringify(newData));
+    
+            window.location.href = "../../../index.html";
+          });
+    </script>
+</body>
+
+</html>
 </body>
 
 </html>

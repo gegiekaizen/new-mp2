@@ -27,22 +27,17 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
+
 <body>
 
-     <!--Navigation Start Here-->
-     <nav class="navbar navbar-expand-md sticky-top">
+    <!--Navigation Start Here-->
+    <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/KLT-modified.png" class="img-fluid" alt="KLT logo">
             </a>
-            <button
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarnav" 
-                class="navbar-toggler"
-                aria-controls="navbarnav"
-                aria-expanded="false"
-                aria-label="toggle naviagation">
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav" class="navbar-toggler"
+                aria-controls="navbarnav" aria-expanded="false" aria-label="toggle naviagation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarnav">
@@ -69,12 +64,8 @@
 
                 </ul>
                 <form class="d-flex navinput">
-                    <input 
-                            class="px-2 search" 
-                            type="search"
-                            placeholder="Search by name"
-                            aria-label="Search"
-                            id="searchInput">
+                    <input class="px-2 search" type="search" placeholder="Search by name" aria-label="Search"
+                        id="searchInput">
                     <button class="btn1 me-2 px-3" type="submit" id="searchHandler">Search</button> &nbsp;&nbsp;&nbsp;
                     <span id="cartIcon"><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
                     <p id="count">0</p>
@@ -85,12 +76,13 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
-                                <li id="usernameDashboard"></li>
-                                <li class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a></li>
-                                <li class="removeLogin" id="isUserLogin"><a href="LoginForm.html">Login</a></li>
-                                <li id="isUserLogout" class="user_logout"></li>
+                            <li id="usernameDashboard"></li>
+                            <li class="removeRegister" id="isUserRegister"><a href="RegistrationForm.html">Register</a>
                             </li>
-                        </ul>
+                            <li class="removeLogin" id="isUserLogin"><a href="LoginForm.html">Login</a></li>
+                            <li id="isUserLogout" class="user_logout"></li>
+                    </li>
+                    </ul>
                     </li>
 
                 </form>
@@ -114,7 +106,7 @@
                     <input type="password" id="password" placeholder="Password">
                 </div>
 
-               
+
                 <div class="Submit-button">
                     <input type="submit" value="Login" id="loginButton">
                 </div>
@@ -122,73 +114,69 @@
                     <a href="#">Forget password</a>
                     <a href="RegistrationForm.html">Create an account</a>
                 </div>
-            
+
             </form>
         </div>
     </div>
 
-    
+
     <script>
         const loginHandler = document.getElementById("loginButton");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const admin = document.getElementById("admin_log")
-const user = JSON.parse(localStorage.getItem("userInfo"));
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const admin = document.getElementById("admin_log")
+        const user = JSON.parse(localStorage.getItem("userInfo"));
 
-<<<<<<< HEAD
-// console.log(userData);
-=======
-// console.log(userData)
->>>>>>> 9f9fa42fc89215aabd31fc56bbad43f3f9648822
-loginHandler.addEventListener("click", (e) => {
-	e.preventDefault();
+        // console.log(userData);
+        loginHandler.addEventListener("click", (e) => {
+            e.preventDefault();
 
-    const userData = user.find((data) => data.email === email.value);
+            const userData = user.find((data) => data.email === email.value);
 
-	if (userData) {
-		if (
-			email.value === userData.email &&
-			password.value === userData.userPassword
-		) {
-			// SET AUTHENTICATED USER TO LOGGED IN TRUE
-			let newData = user.map((data) => {
-				if (data.email === userData.email) {
-					return { ...userData, isLoggedIn: true };
-				} else {
-                    
-					return data;
-				}
-			});
-			console.log(newData);
-			localStorage.setItem("userInfo", JSON.stringify(newData));
-			console.log("login Success");
-            
-            if (userData.userLevel === "user") {
-                window.location.href = "index.html";
+            if (userData) {
+                if (
+                    email.value === userData.email &&
+                    password.value === userData.userPassword
+                ) {
+                    // SET AUTHENTICATED USER TO LOGGED IN TRUE
+                    let newData = user.map((data) => {
+                        if (data.email === userData.email) {
+                            return { ...userData, isLoggedIn: true };
+                        } else {
 
+                            return data;
+                        }
+                    });
+                    console.log(newData);
+                    localStorage.setItem("userInfo", JSON.stringify(newData));
+                    console.log("login Success");
+
+                    if (userData.userLevel === "user") {
+                        window.location.href = "index.html";
+
+                    }
+                    else {
+                        window.location.href = "./adminDashboard/admin css/index.html"
+                    }
+                }
+                // FALLBACK FOR WRONG INPUT CREDENTIAL
+                else {
+                    alert("Invalid Username or password");
+                }
             }
             else {
-                window.location.href = "./adminDashboard/admin css/index.html"
+                alert("Invalid Username or password");
             }
-		} 
-        // FALLBACK FOR WRONG INPUT CREDENTIAL
-        else{
-            alert("Invalid Username or password");
-        }
-	}
-        else{
-            alert("Invalid Username or password");
-        }
-        
-    
-	
-});
+
+
+
+        });
     </script>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
     <script src="./data/products.js"></script>
 
@@ -291,33 +279,33 @@ loginHandler.addEventListener("click", (e) => {
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="dashboard.js"></script>
 
     <!-- CDN FOR FOOTER  -->
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    
-        
+    <script src="script.js"></script>
 
-     <!--Start of Tawk.to Script-->
-     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6437f9434247f20fefeb6cc2/1gttabca6';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6437f9434247f20fefeb6cc2/1gttabca6';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
-        </script>
-        <!--End of Tawk.to Script-->
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
+
 </html>
