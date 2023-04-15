@@ -142,7 +142,8 @@ margin-top: 50px;
 
 .news-letter {
   line-height: 1.8 ;
-  padding: 20px;
+  padding-right: 30px;
+  
 }
 
  .footer-item a {
@@ -333,11 +334,11 @@ text-align: justify;
   border: 1px solid black;
   width: 100px;
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .homes {
     min-height: 90vh;
   }
   #about {
     
   }
-}
+} */
