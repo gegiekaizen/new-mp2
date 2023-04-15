@@ -17,14 +17,17 @@
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
       });
+      // HIDE THE CART ICON IF NO USER IS LOG IN
+      console.log(userData)
+      cartIcon.style.display = userData ? "block" : "none"
+
 
       isUserLogin.style.display = !userData ? "block" : "none" 
       isUserRegister.style.display = !userData ? "block" : "none" 
       isUserLogout.innerHTML = userData ? "Logout" : "" 
-      cartIcon.style.display = userData ? "block" : "none"
       countIcon.style.display = userData ? "block" : "none"
       usernameDashboard.innerHTML = userData ? userData.email :  ""
-      console.log(userData);
+    
 
       searchHandler.addEventListener("click", (e) => {
         e.preventDefault()
@@ -70,7 +73,7 @@
       });
 
       usernameDashboard.innerHTML = `${userData.firstName}`;
-      dropstart.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
+      navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
                       >`;
       removeLogin.innerHTML = "";
